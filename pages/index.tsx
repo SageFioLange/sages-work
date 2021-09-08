@@ -5,14 +5,14 @@ import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Sage Fiorentino-Lange</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-    </div>
+    </>
   );
 };
 
