@@ -1,0 +1,16 @@
+.shelf {
+  background-color: white;
+  padding: 25px;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  z-index: 1;
+  display: inline-block;
+  margin-left: 4px;
+}

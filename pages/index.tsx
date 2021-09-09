@@ -1,6 +1,80 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+<<<<<<< HEAD
+
+const Home: NextPage = () => {
+  return (
+    <p style={{ color: "green" }}>
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+    </p>
+=======
 import Header from "../components/Header";
 
 const Home: NextPage = () => {
@@ -13,6 +87,7 @@ const Home: NextPage = () => {
 
       <Header />
     </>
+>>>>>>> parent of 7f02bd9... i broke it. i think i need to use layout components
   );
 };
 
