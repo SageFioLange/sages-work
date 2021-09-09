@@ -5,23 +5,23 @@ export const pages = [
     color: "#fd4a5c",
   },
   {
-    name: "Pieces",
-    path: "/pieces",
+    name: "Art",
+    path: "/art",
     color: "#f32735",
   },
   {
-    name: "In Progress",
-    path: "/progress",
+    name: "Writing",
+    path: "/writing",
     color: "#e50695",
+  },
+  {
+    name: "Music",
+    path: "/music",
+    color: "#9578d3",
   },
   {
     name: "Services",
     path: "/services",
-    color: "#9578d3",
-  },
-  {
-    name: "AI Chat",
-    path: "/chat",
     color: "#8ab7df",
   },
   {
@@ -35,3 +35,7 @@ export const pages = [
     color: "#00c08a",
   },
 ];
+
+export const pageColors = Object.fromEntries(
+  pages.map(({ path, color }) => [path, color])
+);

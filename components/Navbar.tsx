@@ -3,22 +3,27 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
-import { pages } from "../utils/constants";
+import { pages, pageColors } from "../utils/constants";
 
 const Navbar: NextComponentType = () => {
   const { pathname } = useRouter();
+
   return (
     <div className={styles.shelf}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src="/logo.svg"
-          width={100}
-          height={100}
-          alt="logo"
-          className={styles.logo}
-        />
-      </div>
-      {/* <div className={styles. } */}
+      <Image
+        src="/logo.svg"
+        width={100}
+        height={100}
+        alt="logo"
+        className={styles.logo}
+      />
+      {}
+      <div
+        style={{
+          backgroundColor: pageColors[pathname],
+        }}
+        className={styles.scrollButtons}
+      />
       {pages.map(({ path, name, color }, idx) => {
         const active = pathname === path;
         return (
@@ -29,7 +34,7 @@ const Navbar: NextComponentType = () => {
                   color: active ? color : "black",
                   fontWeight: active ? 600 : 400,
                   fontFamily: active ? "cursive" : "monospace",
-                  display: "block",
+                  display: "inline-block",
                 }}
               >
                 {name}

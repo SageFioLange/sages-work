@@ -4,12 +4,75 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Head>
-        <title>Sage Fiorentino-Lange</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    </>
+    <p style={{ color: "green" }}>
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
+    </p>
   );
 };
 

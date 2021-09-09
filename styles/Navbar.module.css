@@ -1,14 +1,9 @@
 .shelf {
-  width: auto;
-  border-bottom: 1px solid black;
   background-color: white;
-  height: 400px;
   padding: 25px;
-}
-
-.imageWrapper {
-  display: inline-block;
-  margin-right: 25px;
+  right: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 .dot {
@@ -16,6 +11,6 @@
   width: 7px;
   border-radius: 50%;
   z-index: 1;
-  position: absolute;
-  right: 16px;
+  display: inline-block;
+  margin-left: 4px;
 }
