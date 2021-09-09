@@ -1,11 +1,21 @@
+.shelf {
+  width: auto;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
 .container {
   display: inline-block;
   width: auto;
 }
 
-.section {
+.pageLink {
   display: inline-block;
   font-family: "Courier New", Courier, monospace;
   margin-left: 25px;
-  cursor: pointer;
 }

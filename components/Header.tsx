@@ -1,20 +1,51 @@
 import type { NextComponentType } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
 
-const pages = ["Home", "Works", "In Progress", "Services", "About", "Contact"];
+const pages = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Pieces",
+    path: "/pieces",
+  },
+  {
+    name: "In Progress",
+    path: "/progress",
+  },
+  {
+    name: "Services",
+    path: "/services",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
 
-type HeaderProps = { current: string };
-
-const Header: NextComponentType<{}, {}, HeaderProps> = ({
-  current,
-}: HeaderProps) => {
+const Header: NextComponentType = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.shelf}>
+      <Image
+        src="/logo.svg"
+        width={100}
+        height={100}
+        alt="logo"
+        className={styles.logo}
+      />
       {pages.map((page, idx) => (
-        <p className={styles.section} key={idx}>
-          {page}
-        </p>
+        <div className={styles.container} key={idx}>
+          <Link href={page.path}>
+            <a className={styles.pageLink}>{page.name}</a>
+          </Link>
+        </div>
       ))}
     </div>
   );
