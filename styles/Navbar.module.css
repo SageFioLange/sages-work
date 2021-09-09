@@ -11,19 +11,6 @@
   margin-right: 25px;
 }
 
-.linkContainer {
-  display: inline-flex;
-  position: relative;
-  height: auto;
-  white-space: pre-line;
-}
-
-.pageLink {
-  white-space: nowrap;
-  font-family: "Courier New", Courier, monospace;
-  margin-right: 25px;
-}
-
 .dot {
   height: 7px;
   width: 7px;

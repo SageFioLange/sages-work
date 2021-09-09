@@ -6,8 +6,7 @@ import styles from "../styles/Navbar.module.css";
 import { pages } from "../utils/constants";
 
 const Navbar: NextComponentType = () => {
-  const router = useRouter();
-
+  const { pathname } = useRouter();
   return (
     <div className={styles.shelf}>
       <div className={styles.imageWrapper}>
@@ -21,24 +20,24 @@ const Navbar: NextComponentType = () => {
       </div>
       {/* <div className={styles. } */}
       {pages.map(({ path, name, color }, idx) => {
-        const active = router.pathname === path;
+        const active = pathname === path;
         return (
-          <div className={styles.linkContainer} key={idx}>
-            {active ? (
-              <div className={styles.dot} style={{ backgroundColor: color }} />
-            ) : null}
+          <div style={{ position: "relative" }} key={idx}>
             <Link href={path} passHref>
               <a
-                className={styles.pageLink}
                 style={{
                   color: active ? color : "black",
                   fontWeight: active ? 600 : 400,
                   fontFamily: active ? "cursive" : "monospace",
+                  display: "block",
                 }}
               >
                 {name}
               </a>
             </Link>
+            {active ? (
+              <div className={styles.dot} style={{ backgroundColor: color }} />
+            ) : null}
           </div>
         );
       })}
