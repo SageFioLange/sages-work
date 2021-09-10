@@ -11,16 +11,15 @@ const Navigation: NextComponentType = () => {
   const [logoRotate, setLogoRotate] = useState(0);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ border: `1px solid ${pageColors[pathname]}` }}
+    >
       <div
         style={{
           transform: `rotate(${logoRotate * 360}deg)`,
-          transition: "transform 1s",
-          height: 100,
-          width: 100,
-          marginRight: 0,
-          marginLeft: "auto",
         }}
+        className={styles.logo}
       >
         <Image
           src="/logo.svg"

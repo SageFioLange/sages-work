@@ -3,7 +3,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 

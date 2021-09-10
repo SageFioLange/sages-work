@@ -1,7 +1,7 @@
 export const pages = [
   {
     name: "Home",
-    path: "/",
+    path: "/home",
     color: "#fd4a5c",
   },
   {
