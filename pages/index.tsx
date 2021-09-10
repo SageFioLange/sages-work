@@ -3,9 +3,24 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { homeContent, points } from "../utils/constants";
+import { isMobile } from "react-device-detect";
 
 const Home: NextPage = () => {
-  return (
+  return isMobile ? (
+    <div>
+      {homeContent.map(({ name, url }, idx) => (
+        <div key={idx} data-scroll data-scroll-speed={`${points[idx][4]}`}>
+          <Image
+            alt={name}
+            src={url}
+            className={styles.image}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      ))}
+    </div>
+  ) : (
     <div className={styles.gallery}>
       {homeContent.map(({ name, url }, idx) => (
         <div
