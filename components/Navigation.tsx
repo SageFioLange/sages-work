@@ -4,19 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
 import { pages, pageColors } from "../utils/constants";
+import { useState } from "react";
 
 const Navigation: NextComponentType = () => {
   const { pathname } = useRouter();
+  const [chat, setChat] = useState(false);
 
   return (
-    <div className={styles.shelf}>
-      <Image
-        src="/logo.svg"
-        width={100}
-        height={100}
-        alt="logo"
-        className={styles.logo}
-      />
+    <div className={styles.container}>
+      <div
+        style={{
+          transform: `rotate(${chat ? 180 : 0}deg)`,
+          transition: "transform 1s",
+        }}
+      >
+        <Image
+          src="/logo.svg"
+          width={100}
+          height={100}
+          alt="logo"
+          className={styles.logo}
+          onClick={() => setChat(!chat)}
+        />
+      </div>
       {}
       <div
         style={{

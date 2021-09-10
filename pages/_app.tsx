@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         gestureDirection: "both",
       }}
       containerRef={containerRef}
-      watch={[isMobile, pathname]}
+      watch={[pathname]}
     >
       <main data-scroll-container ref={containerRef}>
         <Head>
