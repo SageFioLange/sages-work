@@ -1,0 +1,6 @@
+.container {
+  width: 100vw;
+  height: 65px;
+  position: sticky;
+  top: auto;
+}

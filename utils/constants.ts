@@ -39,3 +39,23 @@ export const pages = [
 export const pageColors = Object.fromEntries(
   pages.map(({ path, color }) => [path, color])
 );
+
+export const images = {
+  portrait: {
+    name: "portrait",
+    width: 489,
+    height: 600,
+  },
+  landscape: {
+    name: "landscape",
+    width: 900,
+    height: 497,
+  },
+  square: {
+    name: "square",
+    width: 420,
+    height: 420,
+  },
+};
+
+export const homeContent = Object.values(images);

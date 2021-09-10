@@ -1,6 +1,8 @@
 .shelf {
   background-color: white;
+  z-index: 1;
   padding: 25px;
+  margin-right: 100px;
   right: 0;
   bottom: 0;
   position: fixed;

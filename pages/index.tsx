@@ -1,78 +1,22 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { homeContent } from "../utils/constants";
 
 const Home: NextPage = () => {
   return (
-    <p style={{ color: "green" }}>
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-      aksldjfalsdkjalsdfjalsdjfadsjfasdfadsf
-    </p>
+    <div className={styles.container}>
+      {homeContent.map(({ name, width, height }, idx) => (
+        <Image
+          key={idx}
+          alt={name}
+          src={`/images/${name}.jpeg`}
+          width={width}
+          height={height}
+          className={styles.image}
+        />
+      ))}
+    </div>
   );
 };
 
