@@ -6,28 +6,24 @@ import { homeContent, points } from "../utils/constants";
 import { isMobile } from "react-device-detect";
 
 const Home: NextPage = () => {
-  return isMobile ? (
-    <div>
-      {homeContent.map(({ name, url }, idx) => (
-        <div key={idx} data-scroll data-scroll-speed={`${points[idx][4]}`}>
-          <Image
-            alt={name}
-            src={url}
-            className={styles.image}
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-      ))}
-    </div>
-  ) : (
-    <div className={styles.gallery}>
+  return (
+    <div
+      className={styles.gallery}
+      style={{
+        height: isMobile ? "250vh" : "100vh",
+        width: isMobile ? "100vw" : "250vw",
+      }}
+    >
       {homeContent.map(({ name, url }, idx) => (
         <div
           key={idx}
           style={{
-            gridColumn: `${points[idx][0]} / span ${points[idx][1]}`,
-            gridRow: `${points[idx][2]} / span ${points[idx][3]}`,
+            gridColumn: isMobile
+              ? `${points[idx][2]} / span ${points[idx][3]}`
+              : `${points[idx][0]} / span ${points[idx][1]}`,
+            gridRow: isMobile
+              ? `${points[idx][0]} / span ${points[idx][1]}`
+              : `${points[idx][2]} / span ${points[idx][3]}`,
             placeSelf: "stretch",
           }}
           data-scroll
