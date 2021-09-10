@@ -4,7 +4,6 @@ import Head from "next/head";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { isMobile } from "react-device-detect";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 
@@ -15,11 +14,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        direction: isMobile ? "vertical" : "horizontal",
+        smartphone: {
+          direction: "vertical",
+          smooth: true,
+        },
+        direction: "horizontal",
         gestureDirection: "both",
       }}
       containerRef={containerRef}
-      watch={[isMobile, pathname]}
+      watch={[pathname]}
     >
       <main data-scroll-container ref={containerRef}>
         <Head>
