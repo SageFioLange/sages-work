@@ -15,8 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       options={{
         smooth: true,
         smartphone: {
-          direction: "vertical",
-          smooth: true,
+          smooth: false,
         },
         direction: "horizontal",
         gestureDirection: "both",

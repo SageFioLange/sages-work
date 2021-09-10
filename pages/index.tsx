@@ -1,17 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from "react";
 import Image from "next/image";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { homeContent, points } from "../utils/constants";
 import { isMobile } from "react-device-detect";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const Home: NextPage = () => {
-  const { scroll, isReady } = useLocomotiveScroll();
-  useEffect(() => {
-    if (isReady) scroll.init();
-  });
   return (
     <div
       className={styles.gallery}
