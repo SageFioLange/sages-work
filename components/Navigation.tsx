@@ -1,5 +1,5 @@
 import type { NextComponentType } from "next";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
@@ -8,14 +8,18 @@ import { useState } from "react";
 
 const Navigation: NextComponentType = () => {
   const { pathname } = useRouter();
-  const [chat, setChat] = useState(false);
+  const [logoRotate, setLogoRotate] = useState(0);
 
   return (
     <div className={styles.container}>
       <div
         style={{
-          transform: `rotate(${chat ? 180 : 0}deg)`,
+          transform: `rotate(${logoRotate * 360}deg)`,
           transition: "transform 1s",
+          height: 100,
+          width: 100,
+          marginRight: 0,
+          marginLeft: "auto",
         }}
       >
         <Image
@@ -24,16 +28,20 @@ const Navigation: NextComponentType = () => {
           height={100}
           alt="logo"
           className={styles.logo}
-          onClick={() => setChat(!chat)}
+          onClick={() => {
+            setLogoRotate(logoRotate + 1);
+            let idx = 0;
+            let match = false;
+            pages.forEach(({ path }) => {
+              if (path === pathname) match = true;
+              if (!match) idx = idx + 1;
+            });
+            idx = idx + 1;
+            if (idx === pages.length) idx = 0;
+            router.push(pages[idx].path);
+          }}
         />
       </div>
-      {}
-      <div
-        style={{
-          backgroundColor: pageColors[pathname],
-        }}
-        className={styles.scrollButtons}
-      />
       {pages.map(({ path, name, color }, idx) => {
         const active = pathname === path;
         return (
@@ -45,6 +53,7 @@ const Navigation: NextComponentType = () => {
                   fontWeight: active ? 600 : 400,
                   fontFamily: active ? "cursive" : "monospace",
                   display: "inline-block",
+                  transition: "color 0.5s",
                 }}
               >
                 {name}

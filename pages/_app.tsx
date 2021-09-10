@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div data-scroll-section>
           <Component {...pageProps} />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </LocomotiveScrollProvider>
   );
