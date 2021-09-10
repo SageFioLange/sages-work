@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       options={{
         smooth: true,
         smartphone: {
-          smooth: false,
+          smooth: true,
+          direction: "vertical",
         },
         direction: "horizontal",
         gestureDirection: "both",
@@ -23,14 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       containerRef={containerRef}
       watch={[pathname]}
     >
+      <Head>
+        <title>Sage Fiorentino-Lange</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navigation />
       <main data-scroll-container ref={containerRef}>
-        <Head>
-          <title>Sage Fiorentino-Lange</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <Navigation />
-        <div data-scroll-section>
+        <div data-scroll>
           <Component {...pageProps} />
         </div>
         {/* <Footer /> */}
