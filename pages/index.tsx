@@ -1,20 +1,35 @@
-import type { NextPage } from "next";
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import { homeContent } from "../utils/constants";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { homeContent, points } from "../utils/constants";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.gallery}>
       {homeContent.map(({ name, width, height }, idx) => (
-        <Image
+        <div
           key={idx}
-          alt={name}
-          src={`/images/${name}.jpeg`}
-          width={width}
-          height={height}
-          className={styles.image}
-        />
+          style={{
+            gridColumn: `${points[idx][0]} / span ${points[idx][1]}`,
+            gridRow: `${points[idx][2]} / span ${points[idx][3]}`,
+            placeSelf: "stretch",
+            outline: "20px blue",
+          }}
+          data-scroll
+          data-scroll-speed="10"
+        >
+          <Image
+            alt={name}
+            src={`/images/${name}.jpeg`}
+            width={width}
+            height={height}
+            className={styles.image}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       ))}
     </div>
   );
