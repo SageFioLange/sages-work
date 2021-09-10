@@ -15,11 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        direction: "horizontal",
+        direction: isMobile ? "vertical" : "horizontal",
         gestureDirection: "both",
       }}
       containerRef={containerRef}
-      watch={[pathname]}
+      watch={[isMobile, pathname]}
     >
       <main data-scroll-container ref={containerRef}>
         <Head>

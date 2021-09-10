@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             outline: "20px blue",
           }}
           data-scroll
-          data-scroll-speed="10"
+          data-scroll-speed={`${points[idx][4]}`}
         >
           <Image
             alt={name}

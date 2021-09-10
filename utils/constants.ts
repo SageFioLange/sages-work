@@ -62,9 +62,9 @@ export const images = {
 };
 
 export const points = [
-  [11, 2, 12, 2],
-  [18, 6, 7, 1],
-  [29, 5, 12, 3],
+  [12, 15, 12, 25, 3],
+  [18, 30, 7, 20, 10],
+  [29, 25, 12, 25, 6],
 ];
 
 export const homeContent = Object.values(images);
