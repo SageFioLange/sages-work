@@ -13,11 +13,15 @@ const Navigation: NextComponentType = () => {
   return (
     <div
       className={styles.container}
-      style={{ border: `1px solid ${pageColors[pathname]}` }}
+      style={{
+        border: `1px solid ${pageColors[pathname]}`,
+        transition: "border-color 0.5s",
+      }}
     >
       <div
         style={{
-          transform: `rotate(${logoRotate * 360}deg)`,
+          transform: `rotate(${logoRotate * -360}deg)`,
+          transition: "transform 1s",
         }}
         className={styles.logo}
       >
