@@ -10,7 +10,7 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 const Home: NextPage = () => {
   const { scroll, isReady } = useLocomotiveScroll();
   useEffect(() => {
-    if (isReady) scroll.update();
+    if (isReady) scroll.init();
   });
   return (
     <div
@@ -35,12 +35,12 @@ const Home: NextPage = () => {
           data-scroll
           data-scroll-speed={`${points[idx][4]}`}
         >
-          <img
+          <Image
             alt={name}
             src={url}
             className={styles.image}
-            // layout="fill"
-            // objectFit="contain"
+            layout="fill"
+            objectFit="contain"
           />
         </div>
       ))}
