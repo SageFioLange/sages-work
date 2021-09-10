@@ -2,10 +2,10 @@ import type { NextComponentType } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Navbar.module.css";
+import styles from "../styles/Navigation.module.css";
 import { pages, pageColors } from "../utils/constants";
 
-const Navbar: NextComponentType = () => {
+const Navigation: NextComponentType = () => {
   const { pathname } = useRouter();
 
   return (
@@ -50,4 +50,4 @@ const Navbar: NextComponentType = () => {
   );
 };
 
-export default Navbar;
+export default Navigation;
