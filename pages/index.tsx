@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const Index: NextPage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push("/home");
+    router.push("/home", "/");
   });
   return <div />;
 };
