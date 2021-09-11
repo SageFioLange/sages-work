@@ -13,13 +13,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        direction: "horizontal",
+        gestureDirection: "both",
         smartphone: {
           smooth: true,
           direction: "vertical",
           gestureDirection: "both",
         },
-        direction: "horizontal",
-        gestureDirection: "both",
+        tablet: {
+          smooth: true,
+          direction: "vertical",
+          gestureDirection: "both",
+        },
+        resetNativeScroll: false,
       }}
       containerRef={containerRef}
       watch={[pathname]}
@@ -30,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Navigation />
       <main data-scroll-container ref={containerRef}>
-        <div data-scroll>
+        <div data-scroll-section>
           <Component {...pageProps} />
         </div>
       </main>

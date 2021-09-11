@@ -1,18 +1,14 @@
 .container {
-  text-align: center;
-  /* background-color: white; */
-  z-index: 1;
-  padding: 25px;
   right: 0;
-  bottom: 0;
+  z-index: 1;
+  margin: 25px;
   position: fixed;
+  text-align: right;
 }
 
 .logo {
   height: 100;
   width: 100;
-  margin-right: 0;
-  margin-left: "auto";
 }
 
 .dot {

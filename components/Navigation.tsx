@@ -5,23 +5,26 @@ import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
 import { pages, pageColors } from "../utils/constants";
 import { useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const Navigation: NextComponentType = () => {
   const { pathname } = useRouter();
   const [logoRotate, setLogoRotate] = useState(0);
 
   return (
-    <div
-      className={styles.container}
-      style={{
-        border: `1px solid ${pageColors[pathname]}`,
-        transition: "border-color 0.5s",
-      }}
-    >
+    <>
       <div
         style={{
           transform: `rotate(${logoRotate * -360}deg)`,
           transition: "transform 1s",
+          position: "fixed",
+          top: isMobile ? "auto" : 0,
+          left: isMobile ? "auto" : 0,
+          bottom: isMobile ? 0 : "auto",
+          right: isMobile ? 0 : "auto",
+          marginTop: "25px",
+          marginLeft: "10px",
+          zIndex: 1,
         }}
         className={styles.logo}
       >
@@ -45,29 +48,56 @@ const Navigation: NextComponentType = () => {
           }}
         />
       </div>
-      {pages.map(({ path, name, color }, idx) => {
-        const active = pathname === path;
-        return (
-          <div style={{ position: "relative" }} key={idx}>
-            <span
-              onClick={() => router.push(path, "/")}
-              style={{
-                color: active ? color : "black",
-                fontWeight: active ? 600 : 400,
-                fontFamily: active ? "cursive" : "monospace",
-                display: "inline-block",
-                transition: "color 0.5s",
-              }}
-            >
-              {name}
-            </span>
-            {active ? (
-              <div className={styles.dot} style={{ backgroundColor: color }} />
-            ) : null}
-          </div>
-        );
-      })}
-    </div>
+      <div
+        className={styles.container}
+        style={{
+          top: isMobile ? "auto" : 0,
+          bottom: isMobile ? 0 : "auto",
+        }}
+      >
+        {pages.map(({ path, name, color }, idx) => {
+          const active = pathname === path;
+          return (
+            <div style={{ position: "relative" }} key={idx}>
+              {isMobile ? (
+                <span
+                  style={{
+                    color: active ? color : "black",
+                    fontWeight: active ? 600 : 400,
+                    fontFamily: active ? "cursive" : "monospace",
+                    display: "inline-block",
+                    transition: "color 0.5s",
+                  }}
+                  onClick={() => router.push(path, "/")}
+                >
+                  {name}
+                </span>
+              ) : (
+                <Link href={path} passHref>
+                  <a
+                    style={{
+                      color: active ? color : "black",
+                      fontWeight: active ? 600 : 400,
+                      fontFamily: active ? "cursive" : "monospace",
+                      display: "inline-block",
+                      transition: "color 0.5s",
+                    }}
+                  >
+                    {name}
+                  </a>
+                </Link>
+              )}
+              {active ? (
+                <div
+                  className={styles.dot}
+                  style={{ backgroundColor: color }}
+                />
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
