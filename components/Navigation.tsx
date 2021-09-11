@@ -41,7 +41,7 @@ const Navigation: NextComponentType = () => {
             });
             idx = idx + 1;
             if (idx === pages.length) idx = 0;
-            router.push(pages[idx].path);
+            router.push(pages[idx].path, "/");
           }}
         />
       </div>
@@ -49,19 +49,18 @@ const Navigation: NextComponentType = () => {
         const active = pathname === path;
         return (
           <div style={{ position: "relative" }} key={idx}>
-            <Link href={path} passHref>
-              <a
-                style={{
-                  color: active ? color : "black",
-                  fontWeight: active ? 600 : 400,
-                  fontFamily: active ? "cursive" : "monospace",
-                  display: "inline-block",
-                  transition: "color 0.5s",
-                }}
-              >
-                {name}
-              </a>
-            </Link>
+            <span
+              onClick={() => router.push(path, "/")}
+              style={{
+                color: active ? color : "black",
+                fontWeight: active ? 600 : 400,
+                fontFamily: active ? "cursive" : "monospace",
+                display: "inline-block",
+                transition: "color 0.5s",
+              }}
+            >
+              {name}
+            </span>
             {active ? (
               <div className={styles.dot} style={{ backgroundColor: color }} />
             ) : null}

@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         smartphone: {
           smooth: true,
           direction: "vertical",
+          gestureDirection: "both",
         },
         direction: "horizontal",
         gestureDirection: "both",
@@ -32,9 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div data-scroll>
           <Component {...pageProps} />
         </div>
-        {/* <Footer /> */}
       </main>
     </LocomotiveScrollProvider>
   );
 }
+
 export default MyApp;

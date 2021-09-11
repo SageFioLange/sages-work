@@ -3,14 +3,13 @@ import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { homeContent, points } from "../utils/constants";
 import { isMobile } from "react-device-detect";
-import { useEffect } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const Home: NextPage = () => {
-  const { scroll } = useLocomotiveScroll();
-  useEffect(() => {
-    setTimeout(() => scroll.update(), 4000);
-  });
+  const { scroll, isReady } = useLocomotiveScroll();
+  console.log(scroll);
+
   return (
     <div
       className={styles.gallery}
