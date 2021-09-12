@@ -3,13 +3,8 @@ import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { homeContent, points } from "../utils/constants";
 import { isMobile } from "react-device-detect";
-import { useEffect, useCallback, useRef } from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const Home: NextPage = () => {
-  const { scroll, isReady } = useLocomotiveScroll();
-  console.log(scroll);
-
   return (
     <div
       className={styles.gallery}
@@ -34,6 +29,7 @@ const Home: NextPage = () => {
           data-scroll-speed={`${points[idx][4]}`}
         >
           <Image
+            loading="eager"
             alt={name}
             src={url}
             className={styles.image}

@@ -3,7 +3,7 @@ import router, { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
-import { pages, pageColors } from "../utils/constants";
+import { pages } from "../utils/constants";
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -14,19 +14,31 @@ const Navigation: NextComponentType = () => {
   return (
     <>
       <div
-        style={{
-          transform: `rotate(${logoRotate * -360}deg)`,
-          transition: "transform 1s",
-          position: "fixed",
-          top: isMobile ? "auto" : 0,
-          left: isMobile ? "auto" : 0,
-          bottom: isMobile ? 0 : "auto",
-          right: isMobile ? 0 : "auto",
-          height: 99,
-          width: 66,
-          margin: 25,
-          zIndex: 1,
-        }}
+        style={
+          isMobile
+            ? {
+                transform: `rotate(${logoRotate * -360}deg)`,
+                transition: "transform 1s",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                height: 99,
+                width: 66,
+                margin: 25,
+                zIndex: 1,
+              }
+            : {
+                transform: `rotate(${logoRotate * -360}deg)`,
+                transition: "transform 1s",
+                position: "fixed",
+                bottom: 0,
+                right: 0,
+                height: 99,
+                width: 66,
+                margin: 25,
+                zIndex: 1,
+              }
+        }
         className={styles.logo}
       >
         <Image

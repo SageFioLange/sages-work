@@ -1,13 +1,11 @@
 .gallery {
-  border: 1px red solid;
   display: grid;
   grid-template: repeat(50, 2%) / repeat(50, 2%);
   justify-items: center;
   align-items: center;
 }
 
-.image {
-  outline: 10px blue;
+.container {
   width: auto;
   height: auto;
 }
