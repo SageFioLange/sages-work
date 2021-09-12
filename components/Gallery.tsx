@@ -1,11 +1,7 @@
 import { NextComponentType } from "next";
 import styles from "../styles/Gallery.module.css";
 import { isMobile } from "react-device-detect";
-import dynamic from "next/dynamic";
-
-const Image = dynamic(() => import("next/image"), {
-  ssr: false,
-});
+import Image from "next/image";
 
 type GalleryProps = {
   content: {
@@ -51,8 +47,6 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
             className={styles.image}
             layout="fill"
             objectFit="contain"
-            width={100}
-            height={100}
           />
         </div>
       ))}
