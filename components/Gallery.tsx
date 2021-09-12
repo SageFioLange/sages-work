@@ -39,6 +39,7 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
               : `${points[idx][2]} / span ${points[idx][3]}`,
             placeSelf: "stretch",
             backgroundColor: "blue",
+            position: "relative",
           }}
           data-scroll
           data-scroll-speed={`${points[idx][4]}`}
