@@ -1,9 +1,14 @@
 import type { NextPage } from "next";
-import { homeContent, points } from "../utils/constants";
-import Gallery from "../components/Gallery";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-const Home: NextPage = () => {
-  return <Gallery content={homeContent} points={points} />;
+// This is a hack to make sure that locomotive scroll works on the home page on the first load
+const Index: NextPage = () => {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/home", "/");
+  });
+  return <div />;
 };
 
-export default Home;
+export default Index;
