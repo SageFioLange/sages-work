@@ -1,14 +1,10 @@
 .container {
+  top: 0;
   right: 0;
   z-index: 1;
   margin: 25px;
   position: fixed;
   text-align: right;
-}
-
-.logo {
-  height: 100;
-  width: 100;
 }
 
 .dot {

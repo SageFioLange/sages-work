@@ -22,18 +22,17 @@ const Navigation: NextComponentType = () => {
           left: isMobile ? "auto" : 0,
           bottom: isMobile ? 0 : "auto",
           right: isMobile ? 0 : "auto",
-          marginTop: "25px",
-          marginLeft: "10px",
+          height: 99,
+          width: 66,
+          margin: 25,
           zIndex: 1,
         }}
         className={styles.logo}
       >
         <Image
           src="/logo.svg"
-          width={100}
-          height={100}
+          layout="fill"
           alt="logo"
-          className={styles.logo}
           onClick={() => {
             setLogoRotate(logoRotate + 1);
             let idx = 0;
@@ -48,13 +47,7 @@ const Navigation: NextComponentType = () => {
           }}
         />
       </div>
-      <div
-        className={styles.container}
-        style={{
-          top: isMobile ? "auto" : 0,
-          bottom: isMobile ? 0 : "auto",
-        }}
-      >
+      <div className={styles.container}>
         {pages.map(({ path, name, color }, idx) => {
           const active = pathname === path;
           return (
