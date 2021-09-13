@@ -55,7 +55,7 @@ const Navigation: NextComponentType = () => {
             });
             idx = idx + 1;
             if (idx === pages.length) idx = 0;
-            router.push(pages[idx].path, "/");
+            router.push(pages[idx].path);
           }}
         />
       </div>
@@ -64,8 +64,8 @@ const Navigation: NextComponentType = () => {
           const active = pathname === path;
           return (
             <div style={{ position: "relative" }} key={idx}>
-              {isMobile ? (
-                <span
+              <Link href={path} passHref>
+                <a
                   style={{
                     color: active ? color : "black",
                     fontWeight: active ? 600 : 400,
@@ -73,25 +73,10 @@ const Navigation: NextComponentType = () => {
                     display: "inline-block",
                     transition: "color 0.5s",
                   }}
-                  onClick={() => router.push(path, "/")}
                 >
                   {name}
-                </span>
-              ) : (
-                <Link href={path} passHref>
-                  <a
-                    style={{
-                      color: active ? color : "black",
-                      fontWeight: active ? 600 : 400,
-                      fontFamily: active ? "cursive" : "monospace",
-                      display: "inline-block",
-                      transition: "color 0.5s",
-                    }}
-                  >
-                    {name}
-                  </a>
-                </Link>
-              )}
+                </a>
+              </Link>
               {active ? (
                 <div
                   className={styles.dot}
