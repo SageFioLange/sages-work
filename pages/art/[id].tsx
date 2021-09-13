@@ -4,13 +4,14 @@ import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import { images } from "../../utils/constants";
 
-const Home: NextPage = () => {
+const ArtItem: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const image = typeof id === "string" ? images[id] : undefined;
+
   return image ? (
     <div data-scroll-section>
-      <div data-scroll className={styles.imageContainer}>
+      <div className={styles.imageContainer}>
         <Image
           src={image.url}
           objectFit="contain"
@@ -18,7 +19,32 @@ const Home: NextPage = () => {
           layout="fill"
         />
       </div>
-      <p>The id of this art item is {id}</p>
+      <p>
+        The id of this art item is {id}
+        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
+        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
+        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
+        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
+        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
+        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
+        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
+        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
+        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
+        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
+        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
+        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
+        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
+        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
+        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
+        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
+        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
+        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
+        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+      </p>
     </div>
   ) : (
     <div>
@@ -27,4 +53,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default ArtItem;
