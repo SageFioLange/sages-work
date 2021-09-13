@@ -1,11 +1,8 @@
 import { NextComponentType } from "next";
 import styles from "../styles/Gallery.module.css";
 import { isMobile } from "react-device-detect";
-import dynamic from "next/dynamic";
-
-const Image = dynamic(() => import("next/image"), {
-  ssr: false,
-});
+import { useRouter } from "next/router";
+import Image from "next/image";
 
 type GalleryProps = {
   content: {
@@ -45,14 +42,13 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
           data-scroll-speed={`${points[idx][4]}`}
         >
           <Image
+            onClick={() => {}}
             loading="eager"
             alt={name}
             src={url}
             className={styles.image}
             layout="fill"
             objectFit="contain"
-            width={100}
-            height={100}
           />
         </div>
       ))}
