@@ -11,7 +11,7 @@ const ArtItem: NextPage = () => {
 
   return image ? (
     <div data-scroll-section>
-      <div className={styles.imageContainer}>
+      <div data-scroll className={styles.imageContainer}>
         <Image
           src={image.url}
           objectFit="contain"
@@ -19,31 +19,11 @@ const ArtItem: NextPage = () => {
           layout="fill"
         />
       </div>
-      <p>
-        The id of this art item is {id}
-        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
-        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
-        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
-        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
-        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
-        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
-        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
-        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
-        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
-        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
-        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
-        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
-        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
-        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
-        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
-        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
-        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
-        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf ashdfashjdfashdfas
-        dfasdfhasldjfhasdfaskjdlfjasdkjfas dfahjsdkfhaskldfhaskdf
-        asdfjhasldkfjhaslkdfhas dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
-        ashdfashjdfashdfas dfasdfhasldjfhasdfaskjdlfjasdkjfas
-        dfahjsdkfhaskldfhaskdf asdfjhasldkfjhaslkdfhas
-        dfjashdlkfhjasdklfjhasdfasjdhflkasjdhflkasdf
+      <p data-scroll className={styles.title}>
+        {image.name}
+      </p>
+      <p data-scroll className={styles.description}>
+        {image.description}
       </p>
     </div>
   ) : (
