@@ -47,15 +47,19 @@ const Navigation: NextComponentType = () => {
           alt="logo"
           onClick={() => {
             setLogoRotate(logoRotate + 1);
-            let idx = 0;
-            let match = false;
-            pages.forEach(({ path }) => {
-              if (path === pathname) match = true;
-              if (!match) idx = idx + 1;
-            });
-            idx = idx + 1;
-            if (idx === pages.length) idx = 0;
-            router.push(pages[idx].path);
+            const pathSplit = pathname.split("/");
+            if (pathSplit.length == 3) router.push(`/${pathSplit[1]}`);
+            else {
+              let idx = 0;
+              let match = false;
+              pages.forEach(({ path }) => {
+                if (path === pathname) match = true;
+                if (!match) idx = idx + 1;
+              });
+              idx = idx + 1;
+              if (idx === pages.length) idx = 0;
+              router.push(pages[idx].path);
+            }
           }}
         />
       </div>

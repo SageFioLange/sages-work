@@ -1,14 +1,11 @@
 import { NextComponentType } from "next";
 import styles from "../styles/Gallery.module.css";
 import { isMobile } from "react-device-detect";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import Image from "next/image";
 
 type GalleryProps = {
-  content: {
-    name: string;
-    url: string;
-  }[];
+  content: TContent[];
   points: number[][];
 };
 
@@ -24,7 +21,7 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
         width: isMobile ? "100vw" : "250vw",
       }}
     >
-      {content.map(({ name, url }, idx) => (
+      {content.map(({ name, id, type, url }, idx) => (
         <div
           key={idx}
           style={{
@@ -42,7 +39,9 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
           data-scroll-speed={`${points[idx][4]}`}
         >
           <Image
-            onClick={() => {}}
+            onClick={() => {
+              router.push(`${type}/${id}`);
+            }}
             loading="eager"
             alt={name}
             src={url}
