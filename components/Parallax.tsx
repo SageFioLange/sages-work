@@ -1,21 +1,21 @@
 import { NextComponentType } from "next";
-import styles from "../styles/Gallery.module.css";
+import styles from "../styles/Parallax.module.css";
 import { isMobile } from "react-device-detect";
 import router, { useRouter } from "next/router";
 import Image from "next/image";
 
-type GalleryProps = {
+type ParallaxProps = {
   content: TContent[];
   points: number[][];
 };
 
-const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
+const Parallax: NextComponentType<{}, {}, ParallaxProps> = ({
   content,
   points,
-}: GalleryProps) => {
+}: ParallaxProps) => {
   return (
     <div
-      className={styles.gallery}
+      className={styles.parallax}
       style={{
         height: isMobile ? "250vh" : "100vh",
         width: isMobile ? "100vw" : "250vw",
@@ -55,4 +55,4 @@ const Gallery: NextComponentType<{}, {}, GalleryProps> = ({
   );
 };
 
-export default Gallery;
+export default Parallax;

@@ -4,41 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
 import { pages } from "../utils/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 const Navigation: NextComponentType = () => {
   const { pathname } = useRouter();
   const [logoRotate, setLogoRotate] = useState(0);
+  const [corner, setCorner] = useState(false);
+
+  useEffect(() => {
+    setCorner(isMobile);
+  }, []);
 
   return (
     <>
       <div
-        style={
-          isMobile
-            ? {
-                transform: `rotate(${logoRotate * -360}deg)`,
-                transition: "transform 1s",
-                position: "fixed",
-                top: 0,
-                left: 0,
-                height: 99,
-                width: 66,
-                margin: 25,
-                zIndex: 1,
-              }
-            : {
-                transform: `rotate(${logoRotate * -360}deg)`,
-                transition: "transform 1s",
-                position: "fixed",
-                bottom: 0,
-                right: 0,
-                height: 99,
-                width: 66,
-                margin: 25,
-                zIndex: 1,
-              }
-        }
+        style={{
+          transform: `rotate(${logoRotate * 360}deg)`,
+          transition: "transform 1s",
+
+          bottom: corner ? "0px" : "auto",
+          right: corner ? "0px" : "auto",
+          top: corner ? "auto" : "0px",
+          left: corner ? "auto" : "0px",
+        }}
         className={styles.logo}
       >
         <Image

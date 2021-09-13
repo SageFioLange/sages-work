@@ -10,8 +10,8 @@ const ArtItem: NextPage = () => {
   const image = typeof id === "string" ? images[id] : undefined;
 
   return image ? (
-    <div data-scroll-section>
-      <div data-scroll className={styles.imageContainer}>
+    <>
+      <div className={styles.imageContainer}>
         <Image
           src={image.url}
           objectFit="contain"
@@ -19,13 +19,8 @@ const ArtItem: NextPage = () => {
           layout="fill"
         />
       </div>
-      <p data-scroll className={styles.title}>
-        {image.name}
-      </p>
-      <p data-scroll className={styles.description}>
-        {image.description}
-      </p>
-    </div>
+      <h1 className={styles.title}>{image.name}</h1>
+    </>
   ) : (
     <div>
       <p>unable to find image.</p>

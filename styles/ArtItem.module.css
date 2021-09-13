@@ -8,14 +8,9 @@
 }
 
 .title {
+  font: 600 2em Arial;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   margin: 25px;
-  margin-bottom: 10px;
-  font-family: cursive;
-  font-size: 2em;
-}
-
-.description {
-  margin: 25px;
-  margin-top: 0px;
-  font-family: "Courier New", Courier, monospace;
 }

@@ -5,15 +5,16 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Navigation from "../components/Navigation";
 import { useRouter } from "next/router";
 import { useRef } from "react";
+import ResetScroll from "../utils/ResetScroll";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const containerRef = useRef(null);
   const { pathname } = useRouter();
+
   return (
     <LocomotiveScrollProvider
       options={{
         touchMultiplier: 1,
-        reloadOnContextChange: true,
         smooth: true,
         direction: "horizontal",
         gestureDirection: "both",
@@ -27,7 +28,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           direction: "vertical",
           gestureDirection: "both",
         },
-        resetNativeScroll: false,
       }}
       containerRef={containerRef}
       watch={[pathname]}
@@ -37,11 +37,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <main data-scroll-container ref={containerRef}>
-        <div data-scroll-section>
-          <Component {...pageProps} />
-        </div>
-      </main>
+      <ResetScroll>
+        <main data-scroll-container ref={containerRef}>
+          <div data-scroll-section>
+            <Component {...pageProps} />
+          </div>
+        </main>
+      </ResetScroll>
     </LocomotiveScrollProvider>
   );
 }
