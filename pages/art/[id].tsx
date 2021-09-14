@@ -3,23 +3,16 @@ import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import { images } from "../../utils/constants";
-import { isMobile } from "react-device-detect";
+import { useState } from "react";
 
 const ArtItem: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const image = typeof id === "string" ? images[id] : undefined;
+  const [desc, setDesc] = useState(false);
 
   return image ? (
-    <div
-      data-scroll
-      style={{
-        width: isMobile ? "100vw" : "150vw",
-        height: isMobile ? "150vh" : "100vh",
-        display: "flex",
-        flexDirection: isMobile ? "column" : "row",
-      }}
-    >
+    <>
       <div data-scroll className={styles.imageContainer}>
         <Image
           src={image.url}
@@ -30,30 +23,30 @@ const ArtItem: NextPage = () => {
       </div>
       <h1 className={styles.title}>{image.name}</h1>
       <div
-        data-scroll
-        style={
-          isMobile
-            ? {
-                margin: "0 5vw",
-                height: "50vh",
-                width: "90vw",
-                inset: "0, 0, 0, auto",
-              }
-            : {
-                marginTop: "25vh",
-                height: "75vh",
-                width: "35vw",
-                inset: "auto, 0, 0, 0",
-              }
-        }
+        className={styles.descContainer}
+        onClick={() => setDesc(!desc)}
+        style={{
+          transition: "opacity 1s",
+          opacity: desc ? 100 : 0,
+        }}
       >
-        {isMobile ? (
-          <p className={styles.description}>{image.description}</p>
-        ) : (
-          <pre className={styles.description}>{image.description}</pre>
-        )}
+        <p
+          style={{
+            fontFamily: "monospace",
+            backgroundColor: "white",
+            padding: "25px",
+            height: "auto",
+            width: "auto",
+            maxWidth: "40vw",
+            maxHeight: "60vh",
+            overflow: "auto",
+            wordBreak: "break-word",
+          }}
+        >
+          {image.description}
+        </p>
       </div>
-    </div>
+    </>
   ) : (
     <></>
   );

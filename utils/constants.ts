@@ -43,6 +43,7 @@ export const pageColors = Object.fromEntries(
 export const images: Record<string | number, TContent> = {
   portrait: {
     name: "portrait",
+    date: "June 2002",
     description:
       "Yeah it's a portrait. I'm born rich life ain't fair. It's silver spoon coon ho. Ain't nobody sicker in my Fisker vroom vroom ho, ain't no body... Fiskers don't make noise when they start up, just so you know",
     id: "portrait",
@@ -51,15 +52,16 @@ export const images: Record<string | number, TContent> = {
   },
   1052930: {
     name: "landscape",
+    date: "1344-1567",
     id: 1052930,
-    description: `oh my gooooooooooddddddddddddddd 
-its a fucking asdfasdfasdfas dfasdfsadfasdfasdfas 
-dfasdfasdfsadplaceholder chill out bro`,
+    description:
+      "oh my goooooooooooooooddddddddddd it's just a fucking placeholder bro chill out",
     type: "art",
     url: "https://i.stack.imgur.com/y9DpT.jpg",
   },
   "what the fuck": {
     name: "square",
+    date: "2019",
     description:
       "What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.",
     id: "what the fuck",
