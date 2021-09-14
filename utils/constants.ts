@@ -52,8 +52,9 @@ export const images: Record<string | number, TContent> = {
   1052930: {
     name: "landscape",
     id: 1052930,
-    description:
-      "oh my gooooooooooddddddddddddddd its a fucking placeholder chill out bro",
+    description: `oh my gooooooooooddddddddddddddd 
+its a fucking asdfasdfasdfas dfasdfsadfasdfasdfas 
+dfasdfasdfsadplaceholder chill out bro`,
     type: "art",
     url: "https://i.stack.imgur.com/y9DpT.jpg",
   },

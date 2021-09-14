@@ -10,7 +10,11 @@
 .title {
   font: 600 2em Arial;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   margin: 25px;
+}
+
+.description {
+  font-family: monospace;
 }
