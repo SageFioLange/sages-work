@@ -4,11 +4,12 @@ import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
 import { useState } from "react";
+import { images } from "../../utils/constants";
 
 const ArtItem: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const image = typeof id === "string" ? images[id] : undefined;
+  const image = (typeof id === "string" ? images[id] : undefined) as TArt;
   const [desc, setDesc] = useState(false);
 
   return image ? (
