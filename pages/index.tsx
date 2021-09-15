@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { homeContent, points } from "../utils/constants";
+import homeContent from "../utils/constants/home";
 import dynamic from "next/dynamic";
 
 const Parallax = dynamic(() => import("../components/Parallax"), {
@@ -7,7 +7,7 @@ const Parallax = dynamic(() => import("../components/Parallax"), {
 });
 
 const Home: NextPage = () => {
-  return <Parallax content={homeContent} points={points} />;
+  return <Parallax homeContent={homeContent} />;
 };
 
 export default Home;

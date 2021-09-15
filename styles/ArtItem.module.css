@@ -25,7 +25,17 @@
 
 .title {
   font: 600 2em Arial;
-  margin: 25px;
+  margin-bottom: 12px;
+}
+
+.series {
+  font: 600 1em Arial;
+  margin-bottom: 12px;
+}
+
+.date {
+  font: 400 1em Arial;
+  margin-bottom: 25px;
 }
 
 .description {

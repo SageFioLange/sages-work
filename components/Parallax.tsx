@@ -1,15 +1,14 @@
 import { FC } from "react";
 import styles from "../styles/Parallax.module.css";
 import { isMobile } from "react-device-detect";
-import router, { useRouter } from "next/router";
+import router from "next/router";
 import Image from "next/image";
 
 type ParallaxProps = {
-  content: TContent[];
-  points: number[][];
+  homeContent: THomeContent;
 };
 
-const Parallax: FC<ParallaxProps> = ({ content, points }: ParallaxProps) => {
+const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
   return (
     <div
       className={styles.parallax}
@@ -18,36 +17,43 @@ const Parallax: FC<ParallaxProps> = ({ content, points }: ParallaxProps) => {
         width: isMobile ? "100vw" : "250vw",
       }}
     >
-      {content.map(({ name, id, type, url }, idx) => (
-        <div
-          key={idx}
-          style={{
-            gridColumn: isMobile
-              ? `${points[idx][2]} / span ${points[idx][3]}`
-              : `${points[idx][0]} / span ${points[idx][1]}`,
-            gridRow: isMobile
-              ? `${points[idx][0]} / span ${points[idx][1]}`
-              : `${points[idx][2]} / span ${points[idx][3]}`,
-            placeSelf: "stretch",
-            backgroundColor: "blue",
-            position: "relative",
-          }}
-          data-scroll
-          data-scroll-speed={`${points[idx][4]}`}
-        >
-          <Image
-            onClick={() => {
-              router.push(`${type}/${id}`);
-            }}
-            loading="eager"
-            alt={name}
-            src={url}
-            className={styles.image}
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-      ))}
+      {homeContent.map((item, idx) => {
+        switch (item.content.type) {
+          case "piece":
+            return (
+              <div
+                key={idx}
+                style={{
+                  gridColumn: isMobile
+                    ? `${item.points[2]} / span ${item.points[3]}`
+                    : `${item.points[0]} / span ${item.points[1]}`,
+                  gridRow: isMobile
+                    ? `${item.points[0]} / span ${item.points[1]}`
+                    : `${item.points[2]} / span ${item.points[3]}`,
+                  placeSelf: "stretch",
+                  backgroundColor: "blue",
+                  position: "relative",
+                }}
+                data-scroll
+                data-scroll-speed={`${item.points[4]}`}
+              >
+                <Image
+                  onClick={() => {
+                    router.push(`art/${item.content.id}`);
+                  }}
+                  loading="eager"
+                  alt={item.content.title}
+                  src={item.content.url}
+                  className={styles.image}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            );
+          default:
+            <></>;
+        }
+      })}
     </div>
   );
 };

@@ -2,17 +2,18 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
+import Gallery from "../../components/Gallery";
 import { isMobile } from "react-device-detect";
-import { useState } from "react";
-import { images } from "../../utils/constants";
+import media from "../../utils/constants/media";
 
 const ArtItem: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const image = (typeof id === "string" ? images[id] : undefined) as TArt;
-  const [desc, setDesc] = useState(false);
+  const item = (typeof id === "string" ? media[id] : undefined) as
+    | TPiece
+    | TSeries;
 
-  return image ? (
+  return item ? (
     <div
       data-scroll
       style={
@@ -23,12 +24,19 @@ const ArtItem: NextPage = () => {
       className={styles.container}
     >
       <div data-scroll className={styles.imageContainer}>
-        <Image
-          src={image.url}
-          objectFit="contain"
-          alt={image.name}
-          layout="fill"
-        />
+        {item.type === "piece" ? (
+          <Image
+            src={item.url}
+            objectFit="contain"
+            alt={item.title}
+            layout="fill"
+          />
+        ) : (
+          <Gallery
+            urls={item.pieces.map(({ url }) => url)}
+            alts={item.pieces.map(({ title }) => title)}
+          />
+        )}
       </div>
       <div
         className={styles.textContainer}
@@ -37,9 +45,13 @@ const ArtItem: NextPage = () => {
           gridRow: isMobile ? "2 / 3" : "1 / 2",
         }}
       >
-        <h1 className={styles.title}>{image.name}</h1>
+        <h1 className={styles.title}>{item.title}</h1>
+        {item.type === "piece" && item.series ? (
+          <h2 className={styles.series}>{media[item.series].title}</h2>
+        ) : null}
+        <h3 className={styles.date}>{item.date}</h3>
         <textarea readOnly={true} className={styles.description}>
-          {image.description}
+          {item.description}
         </textarea>
       </div>
     </div>

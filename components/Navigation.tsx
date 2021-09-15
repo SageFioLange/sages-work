@@ -3,7 +3,7 @@ import router, { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
-import { pages } from "../utils/constants";
+import { pages } from "../utils/constants/nav";
 import { useState } from "react";
 
 const Navigation: FC = () => {
@@ -46,6 +46,12 @@ const Navigation: FC = () => {
           const active = pathname === path;
           return (
             <div style={{ position: "relative" }} key={idx}>
+              {active ? (
+                <div
+                  className={styles.dot}
+                  style={{ backgroundColor: color }}
+                />
+              ) : null}
               <Link href={path} passHref>
                 <a
                   style={{
@@ -59,12 +65,6 @@ const Navigation: FC = () => {
                   {name}
                 </a>
               </Link>
-              {active ? (
-                <div
-                  className={styles.dot}
-                  style={{ backgroundColor: color }}
-                />
-              ) : null}
             </div>
           );
         })}

@@ -24,3 +24,5 @@ const Gallery: FC<GalleryProps> = ({ urls, alts, style }) => {
     </div>
   );
 };
+
+export default Gallery;
