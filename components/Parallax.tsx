@@ -1,7 +1,6 @@
 import { NextComponentType } from "next";
 import styles from "../styles/Parallax.module.css";
-import { isMobile } from "react-device-detect";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 type ParallaxProps = {
@@ -13,26 +12,16 @@ const Parallax: NextComponentType<{}, {}, ParallaxProps> = ({
   content,
   points,
 }: ParallaxProps) => {
+  const router = useRouter();
   return (
-    <div
-      className={styles.parallax}
-      style={{
-        height: isMobile ? "250vh" : "100vh",
-        width: isMobile ? "100vw" : "250vw",
-      }}
-    >
+    <div className={styles.parallax}>
       {content.map(({ name, id, type, url }, idx) => (
         <div
           key={idx}
           style={{
-            gridColumn: isMobile
-              ? `${points[idx][2]} / span ${points[idx][3]}`
-              : `${points[idx][0]} / span ${points[idx][1]}`,
-            gridRow: isMobile
-              ? `${points[idx][0]} / span ${points[idx][1]}`
-              : `${points[idx][2]} / span ${points[idx][3]}`,
+            gridRow: `${points[idx][0]} / span ${points[idx][1]}`,
+            gridColumn: `${points[idx][2]} / span ${points[idx][3]}`,
             placeSelf: "stretch",
-            backgroundColor: "blue",
             position: "relative",
           }}
           data-scroll
