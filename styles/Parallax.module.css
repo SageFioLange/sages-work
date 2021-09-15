@@ -3,8 +3,6 @@
   grid-template: repeat(50, 2%) / repeat(50, 2%);
   justify-items: center;
   align-items: center;
-  height: 250vh;
-  width: 100vw;
 }
 
 .container {

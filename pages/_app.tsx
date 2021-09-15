@@ -14,14 +14,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LocomotiveScrollProvider
       options={{
+        touchMultiplier: 1,
         smooth: true,
-        direction: "vertical",
+        direction: "horizontal",
         gestureDirection: "both",
         smartphone: {
           smooth: true,
+          direction: "vertical",
+          gestureDirection: "both",
         },
         tablet: {
           smooth: true,
+          direction: "vertical",
+          gestureDirection: "both",
         },
       }}
       containerRef={containerRef}

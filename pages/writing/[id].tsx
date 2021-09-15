@@ -6,9 +6,8 @@ const Home: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <div data-scroll className={styles.textContainer}>
-      <h1 className={styles.title}>{image.name}</h1>
-      <p className={styles.description}>{image.description}</p>
+    <div>
+      <p>The id of this writing item is {id}.</p>
     </div>
   );
 };

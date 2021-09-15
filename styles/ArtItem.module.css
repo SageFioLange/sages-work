@@ -1,10 +1,3 @@
-.container {
-  height: 150vh;
-  max-height: 150vh;
-  width: 100vw;
-  max-width: 100vw;
-}
-
 .imageContainer {
   height: 100vh;
   width: 100vw;
@@ -14,22 +7,18 @@
   align-items: center;
 }
 
-.textContainer {
-  padding: 25px;
+.title {
+  font: 600 2em Arial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 25px;
+}
+
+.descContainer {
+  position: fixed;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: "row";
-}
-
-.title {
-  font: 600 2em Arial;
-  margin: 25px;
-}
-
-.description {
-  font: 400 1em monospace;
-  margin: 25px;
-  overflow: auto;
-  max-width: 650px;
 }

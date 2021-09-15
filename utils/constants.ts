@@ -62,29 +62,8 @@ export const images: Record<string | number, TContent> = {
   "what the fuck": {
     name: "square",
     date: "2019",
-    description: `What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.
-      What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.`,
-
+    description:
+      "What the fuck? What the fuck. What? What what the fuck. What fuck the what fuck the? Yes.",
     id: "what the fuck",
     type: "art",
     url: "https://www.foot.com/wp-content/uploads/2017/06/placeholder-square.jpg",
