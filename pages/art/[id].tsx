@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
+import { isMobile } from "react-device-detect";
 import { images } from "../../utils/constants";
 import { useState } from "react";
 
@@ -12,7 +13,15 @@ const ArtItem: NextPage = () => {
   const [desc, setDesc] = useState(false);
 
   return image ? (
-    <>
+    <div
+      data-scroll
+      style={
+        isMobile
+          ? { height: "200vh", width: "100vw" }
+          : { height: "100vh", width: "200vw" }
+      }
+      className={styles.container}
+    >
       <div data-scroll className={styles.imageContainer}>
         <Image
           src={image.url}
@@ -21,32 +30,17 @@ const ArtItem: NextPage = () => {
           layout="fill"
         />
       </div>
-      <h1 className={styles.title}>{image.name}</h1>
       <div
-        className={styles.descContainer}
-        onClick={() => setDesc(!desc)}
+        className={styles.textContainer}
         style={{
-          transition: "opacity 1s",
-          opacity: desc ? 100 : 0,
+          gridColumn: isMobile ? "1 / 2" : "2 / 3",
+          gridRow: isMobile ? "2 / 3" : "1 / 2",
         }}
       >
-        <p
-          style={{
-            fontFamily: "monospace",
-            backgroundColor: "white",
-            padding: "25px",
-            height: "auto",
-            width: "auto",
-            maxWidth: "40vw",
-            maxHeight: "60vh",
-            overflow: "auto",
-            wordBreak: "break-word",
-          }}
-        >
-          {image.description}
-        </p>
+        <h1 className={styles.title}>{image.name}</h1>
+        <textarea className={styles.description}>{image.description}</textarea>
       </div>
-    </>
+    </div>
   ) : (
     <></>
   );

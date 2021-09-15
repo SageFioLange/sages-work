@@ -44,8 +44,9 @@ export const images: Record<string | number, TContent> = {
   portrait: {
     name: "portrait",
     date: "June 2002",
-    description:
-      "Yeah it's a portrait. I'm born rich life ain't fair. It's silver spoon coon ho. Ain't nobody sicker in my Fisker vroom vroom ho, ain't no body... Fiskers don't make noise when they start up, just so you know",
+    description: `Yasdfasdfasdfasdfuasdhglkaghklwahefkajshdfkjlasdhf asdshf ashdf 
+      lasdjhklf ashjdkf asdkjf eah it's a portrait. I'm born rich life ain't fair. It's silver spoon coon ho. Ain't nobody sicker in my Fisker vroom vroom ho, ain't no body... 
+      Fiskers don't make noise when they start up, just so you know`,
     id: "portrait",
     type: "art",
     url: "https://st4.depositphotos.com/9998432/20093/v/450/depositphotos_200930142-stock-illustration-default-placeholder-doctor-half-length.jpg",
