@@ -1,4 +1,4 @@
-import { NextComponentType } from "next";
+import { FC } from "react";
 import styles from "../styles/Parallax.module.css";
 import { isMobile } from "react-device-detect";
 import router, { useRouter } from "next/router";
@@ -9,10 +9,7 @@ type ParallaxProps = {
   points: number[][];
 };
 
-const Parallax: NextComponentType<{}, {}, ParallaxProps> = ({
-  content,
-  points,
-}: ParallaxProps) => {
+const Parallax: FC<ParallaxProps> = ({ content, points }: ParallaxProps) => {
   return (
     <div
       className={styles.parallax}

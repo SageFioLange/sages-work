@@ -35,6 +35,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Sage Fiorentino-Lange</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="google-site-verification"
+          content="l7AB1upu6rJ_wnCYeiKUk0zro8c_e9oMaHMERsGHEG8"
+        />
       </Head>
       <Navigation />
       <ResetScroll>

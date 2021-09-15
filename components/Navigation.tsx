@@ -1,4 +1,4 @@
-import type { NextComponentType } from "next";
+import { FC } from "react";
 import router, { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import styles from "../styles/Navigation.module.css";
 import { pages } from "../utils/constants";
 import { useState } from "react";
 
-const Navigation: NextComponentType = () => {
+const Navigation: FC = () => {
   const { pathname } = useRouter();
   const [logoRotate, setLogoRotate] = useState(0);
 

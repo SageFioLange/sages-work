@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
-import { images } from "../../utils/constants";
 import { useState } from "react";
 
 const ArtItem: NextPage = () => {
@@ -38,7 +37,9 @@ const ArtItem: NextPage = () => {
         }}
       >
         <h1 className={styles.title}>{image.name}</h1>
-        <textarea className={styles.description}>{image.description}</textarea>
+        <textarea readOnly={true} className={styles.description}>
+          {image.description}
+        </textarea>
       </div>
     </div>
   ) : (
