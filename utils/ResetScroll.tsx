@@ -7,8 +7,6 @@ const ResetScroll: NextComponentType = ({ children }) => {
   const { scroll } = useLocomotiveScroll();
   const { pathname, query } = useRouter();
 
-  console.log(pathname);
-
   useEffect(() => {
     scroll &&
       scroll.scrollTo("top", {

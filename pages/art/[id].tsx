@@ -3,13 +3,11 @@ import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useEmblaCarousel } from "embla-carousel/react";
 import { isMobile } from "react-device-detect";
 import media from "../../utils/constants/media";
 
 const ArtItem: NextPage = () => {
   const router = useRouter();
-  const [emblaRef] = useEmblaCarousel();
   const { id } = router.query;
   const item = (typeof id === "string" ? media[id] : undefined) as
     | TPiece

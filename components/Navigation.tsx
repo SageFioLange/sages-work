@@ -4,11 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
 import { pages } from "../utils/constants/nav";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navigation: FC = () => {
-  const { pathname } = useRouter();
+  const { pathname, query } = useRouter();
   const [logoRotate, setLogoRotate] = useState(0);
+  const titleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    titleRef.current &&
+      titleRef.current.animate(
+        [
+          {
+            opacity: 1,
+          },
+          {
+            opacity: 0,
+          },
+        ],
+        1000
+      );
+  }, [pathname, query]);
+
+  console.log(query);
 
   return (
     <>
@@ -68,6 +86,13 @@ const Navigation: FC = () => {
             </div>
           );
         })}
+      </div>
+      <div className={styles.navTitleContainer} ref={titleRef}>
+        <h1 className={styles.navTitle}>
+          {query.id
+            ? `${pathname.replace("[id]", query.id as string)}`
+            : pathname}
+        </h1>
       </div>
     </>
   );
