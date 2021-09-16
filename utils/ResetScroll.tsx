@@ -5,7 +5,9 @@ import { useRouter } from "next/router";
 
 const ResetScroll: NextComponentType = ({ children }) => {
   const { scroll } = useLocomotiveScroll();
-  const { pathname } = useRouter();
+  const { pathname, query } = useRouter();
+
+  console.log(pathname);
 
   useEffect(() => {
     scroll &&
@@ -13,7 +15,7 @@ const ResetScroll: NextComponentType = ({ children }) => {
         duration: 0,
         disableLerp: true,
       });
-  }, [scroll, pathname]);
+  }, [scroll, pathname, query]);
 
   return <>{children}</>;
 };

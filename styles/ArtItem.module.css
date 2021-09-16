@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template: repeat(2, 50%) / repeat(2, 50%);
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
 }
 
 .imageContainer {
@@ -31,6 +31,11 @@
 .series {
   font: 600 1em Arial;
   margin-bottom: 12px;
+}
+
+.series:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .date {
