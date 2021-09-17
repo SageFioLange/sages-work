@@ -185,7 +185,7 @@ export const pieces: Record<string | number, TPiece> = {
     date: "March 2021",
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Heaven" to "Hell" from the perspective of "Earth"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/heaven-hell-earth.png",
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/heaven-hell-earth.jpg",
     type: "piece",
     series: "cloudWatching",
     id: "heavenHellEarth",
@@ -205,7 +205,7 @@ export const pieces: Record<string | number, TPiece> = {
     date: "March 2021",
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Myth" to "History" from the perspective of "Honest Mistake"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/myth-history-honest_mistake.png",
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/myth-history-honest_mistake.jpg",
     type: "piece",
     series: "cloudWatching",
     id: "mythHistoryHonest_Mistake",
