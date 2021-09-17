@@ -40,6 +40,7 @@ const Art: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <div
       data-scroll
+      data-scroll-speed="4"
       style={
         isMobile
           ? {
