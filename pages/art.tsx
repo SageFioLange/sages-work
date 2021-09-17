@@ -68,7 +68,7 @@ const Art: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <Image
             src={imageProps.src}
             alt={imageProps.title}
-            objectFit="contain"
+            objectFit="scale-down"
             layout="fill"
             blurDataURL={imageProps.blurDataURL}
             placeholder="blur"

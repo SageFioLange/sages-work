@@ -107,6 +107,129 @@ export const pieces: Record<string | number, TPiece> = {
     series: "memePosters",
     type: "piece",
   },
+  surgery: {
+    title: "Surgery",
+    date: "September 2021",
+    description:
+      "Acrylics on Canvas Foundation Board. A visual examination of emotions surrounding stitching, patching, and reconstructing",
+    id: "surgery",
+    url: "https://storage.googleapis.com/sages_work_content/art/surgery.jpg",
+    type: "piece",
+  },
+  bicep: {
+    title: "Bicep",
+    date: "Fall 2018",
+    description:
+      "Inspired by the relationship of the part to the whole, this work draws comparison between plant and animal life.",
+    id: "bicep",
+    url: "https://storage.googleapis.com/sages_work_content/art/Bicep.jpg",
+    type: "piece",
+  },
+  goldenLife: {
+    title: "Golden Life",
+    date: "Winter 2018",
+    description: "Taken in the suburbs of Massachussets.",
+    id: "goldenLife",
+    url: "https://storage.googleapis.com/sages_work_content/art/Golden_life.jpg",
+    type: "piece",
+  },
+  zipperInTheSky: {
+    title: "Zipper In The Sky",
+    date: "Fall 2018",
+    description:
+      "This work uses long exposure to render a bright night sky. The focal element, a structure used for shade, appears to unzip (or zip up) the sky above. The juxtaposition of the sky and the shade are signifiers of the dynamic between human structures and the natural world.",
+    id: "zipperInTheSky",
+    url: "https://storage.googleapis.com/sages_work_content/art/Zipper_In_The_Sky.jpg",
+    type: "piece",
+  },
+  conversation: {
+    title: "Conversation",
+    date: "September 2021",
+    description:
+      "Acrylics on Canvas Foundation Board. This work depicts two faces in conversation, represented as abstract paint spikes.",
+    id: "conversation",
+    url: "https://storage.googleapis.com/sages_work_content/art/conversation.jpg",
+    type: "piece",
+  },
+  forestFire: {
+    title: "Forest Fire",
+    date: "September 2021",
+    description:
+      "Acrylics on Canvas Foundation Board. An abstract rendering of a forest fire.",
+    id: "forestFire",
+    url: "https://storage.googleapis.com/sages_work_content/art/forest%20fire.jpg",
+    type: "piece",
+  },
+  eastWestSun: {
+    title: "East - West - Sun",
+    date: "March 2021",
+    description:
+      'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "East" to "West" from the perspective of "Sun"',
+    id: "eastWestSun",
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/east-west-sun.png",
+    type: "piece",
+    series: "cloudWatching",
+  },
+  godSatanMan: {
+    title: "God - Satan - Man",
+    date: "March 2021",
+    description:
+      'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "East" to "West" from the perspective of "Sun"',
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/god-satan-man.png",
+    type: "piece",
+    series: "cloudWatching",
+    id: "godSatanMan",
+  },
+  heavenHellEarth: {
+    title: "Heaven - Hell - Earth",
+    date: "March 2021",
+    description:
+      'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Heaven" to "Hell" from the perspective of "Earth"',
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/heaven-hell-earth.png",
+    type: "piece",
+    series: "cloudWatching",
+    id: "heavenHellEarth",
+  },
+  loveHateFaith: {
+    title: "God - Satan - Man",
+    date: "February 2021",
+    description:
+      'The incipient piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Love" to "Hate" from the perspective of "Faith"',
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/love-hate-faith.png",
+    type: "piece",
+    series: "cloudWatching",
+    id: "loveHateFaith",
+  },
+  mythHistoryHonest_Mistake: {
+    title: "Myth - History - Honest Mistake",
+    date: "March 2021",
+    description:
+      'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Myth" to "History" from the perspective of "Honest Mistake"',
+    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/myth-history-honest_mistake.png",
+    type: "piece",
+    series: "cloudWatching",
+    id: "mythHistoryHonest_Mistake",
+  },
+  verificationPoster: {
+    title: "Nuclear Verification Poster",
+    date: "Spring 2019",
+    description:
+      'A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties. This poster won for "Graphic Designer\'s Choice" as judged by Michael Beirut and Ellen Lupton.',
+    url: "https://storage.googleapis.com/sages_work_content/art/verification_posters/Verification_Poster.jpg",
+    type: "piece",
+    series: "verificationPosters",
+    id: "verificationPoster",
+  },
+  verificationPoster1: {
+    title: "Nuclear Verification Poster",
+    date: "Spring 2019",
+    description:
+      "A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties.",
+    url: "https://storage.googleapis.com/sages_work_content/art/verification_posters/Verification_poster_1.jpg",
+    type: "piece",
+    series: "verificationPosters",
+    id: "verificationPoster1",
+  },
 };
 
 export const series: Record<string | number, TSeries> = {
@@ -116,19 +239,43 @@ export const series: Record<string | number, TSeries> = {
     description: "TODO",
     id: "memePosters",
     pieces: [
+      pieces.fame,
+      pieces.celebrity,
+      pieces.groupMentality,
+      pieces.positivity,
       pieces.absurdism,
       pieces.capitalism,
-      pieces.celebrity,
       pieces.criticalMass,
       pieces.depression,
-      pieces.fame,
-      pieces.groupMentality,
       pieces.hate,
       pieces.nostalgia,
       pieces.politics,
-      pieces.positivity,
       pieces.sexuality,
     ],
+    type: "series",
+  },
+  cloudWatching: {
+    title: "Cloud Watching",
+    date: "February - March 2021",
+    description:
+      "A series of pieces that are generated algorithmically using a Machine Learning Language System and the religious texts of the Bible, the Torah, and the Quran. The System initially encodes each verse as a point in high-dimensional space (768 dimensions), then using complexity reduction techniques folds this space down into 3 dimensions. Next, the points are projected onto a 2D plane such that the resulting projection is a view of the continuum of two points (e.g. the point representing the word Love and the point representing the word Hate) from the position of a third point (e.g. Faith). The colors are determined by the initial positions in 3D space, and the sizes are determined by the distance from the plane. In order to make as many points visible as possible, the points are drawn biggest to smallest, which is not what a literal perspective of the 3D point cloud would look like. Instead, the resulting projection is a sort of inverted perspective, with the middle on top and the edges on the bottom, as if one was looking at something through both sides of the window at once.",
+    id: "cloudWatching",
+    pieces: [
+      pieces.eastWestSun,
+      pieces.godSatanMan,
+      pieces.heavenHellEarth,
+      pieces.loveHateFaith,
+      pieces.mythHistoryHonest_Mistake,
+    ],
+    type: "series",
+  },
+  verificationPosters: {
+    title: "Nuclear Verification Posters",
+    date: "Spring 2019",
+    description:
+      "Posters created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties.",
+    id: "verificationPosters",
+    pieces: [pieces.verificationPoster, pieces.verificationPoster1],
     type: "series",
   },
 };
