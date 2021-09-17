@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LocomotiveScrollProvider
       options={{
-        touchMultiplier: 1.75,
+        touchMultiplier: 2,
         smooth: true,
         direction: "horizontal",
         gestureDirection: "both",
