@@ -6,9 +6,13 @@ import Image from "next/image";
 
 type ParallaxProps = {
   homeContent: THomeContent;
+  blurDataURLs: string[];
 };
 
-const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
+const Parallax: FC<ParallaxProps> = ({
+  homeContent,
+  blurDataURLs,
+}: ParallaxProps) => {
   return (
     <div
       className={styles.parallax}
@@ -31,7 +35,6 @@ const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
                     ? `${item.points[0]} / span ${item.points[1]}`
                     : `${item.points[2]} / span ${item.points[3]}`,
                   placeSelf: "stretch",
-                  backgroundColor: "blue",
                   position: "relative",
                 }}
                 data-scroll
@@ -42,11 +45,13 @@ const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
                     router.push(`art/${item.content.id}`);
                   }}
                   loading="eager"
+                  layout="fill"
+                  objectFit="contain"
                   alt={item.content.title}
                   src={item.content.url}
                   className={styles.image}
-                  layout="fill"
-                  objectFit="contain"
+                  placeholder="blur"
+                  blurDataURL={blurDataURLs[idx]}
                 />
               </div>
             );

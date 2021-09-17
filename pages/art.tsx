@@ -1,8 +1,4 @@
-import type {
-  NextPage,
-  InferGetStaticPropsType,
-  GetStaticPropsContext,
-} from "next";
+import type { NextPage, InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import media from "../utils/constants/media";
@@ -10,7 +6,7 @@ import Image from "next/image";
 import styles from "../styles/Art.module.css";
 import { getPlaiceholder } from "plaiceholder";
 
-export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
+export const getStaticProps = async () => {
   const imageObjects = Object.values(media).filter(
     (item) => item.type === "series" || !item.series
   );
@@ -22,7 +18,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 
       return {
         ...img,
-        alt: item.title,
+        title: item.title,
         id: item.id,
         blurDataURL: base64,
       };
@@ -67,11 +63,11 @@ const Art: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             gridColumn: isMobile ? "1 / 2" : `${idx + 1} / span 1`,
             gridRow: isMobile ? `${idx + 1} / span 1` : "1 / 2",
           }}
-          key={imageProps.id}
+          key={imageProps.title}
         >
           <Image
             src={imageProps.src}
-            alt={imageProps.alt}
+            alt={imageProps.title}
             objectFit="contain"
             layout="fill"
             blurDataURL={imageProps.blurDataURL}
