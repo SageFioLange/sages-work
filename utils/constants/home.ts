@@ -20,8 +20,8 @@ const homeContent = [
     points: [29, 12, 1, 50, 8],
   },
   {
-    content: media.bicep,
-    points: [16, 6, 2, 35, 4],
+    content: media.torrent,
+    points: [14, 8, 2, 35, 4],
   },
   {
     content: media.forestFire,
@@ -52,8 +52,8 @@ const homeContent = [
     points: [23, 3, 22, 28, 24],
   },
   {
-    content: media.groupMentality,
-    points: [14, 2, 7, 12, 10],
+    content: media.bicep,
+    points: [14, 2, 7, 18, 10],
   },
   {
     content: media.verificationPoster1,

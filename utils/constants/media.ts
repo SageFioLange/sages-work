@@ -230,6 +230,14 @@ export const pieces: Record<string, TPiece> = {
     series: "verificationPosters",
     id: "verificationPoster1",
   },
+  torrent: {
+    title: "Torrent",
+    date: "September 18th 2021",
+    description: "Acrylics on canvas.",
+    url: "https://storage.googleapis.com/sages_work_content/art/torrent.jpg",
+    type: "piece",
+    id: "torrent",
+  },
 };
 
 export const series: Record<string | number, TSeries> = {
