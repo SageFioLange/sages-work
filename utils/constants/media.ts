@@ -1,4 +1,4 @@
-export const pieces: Record<string | number, TPiece> = {
+export const pieces: Record<string, TPiece> = {
   absurdism: {
     title: "Absurdism",
     date: "Spring 2019",
