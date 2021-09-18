@@ -6,13 +6,9 @@ import Image from "next/image";
 
 type ParallaxProps = {
   homeContent: THomeContent;
-  blurDataURLs: string[];
 };
 
-const Parallax: FC<ParallaxProps> = ({
-  homeContent,
-  blurDataURLs,
-}: ParallaxProps) => {
+const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
   return (
     <div
       className={styles.parallax}
@@ -26,7 +22,7 @@ const Parallax: FC<ParallaxProps> = ({
           case "piece":
             return (
               <div
-                key={idx}
+                key={item.content.id}
                 style={{
                   gridColumn: isMobile
                     ? `${item.points[2]} / span ${item.points[3]}`
@@ -37,6 +33,7 @@ const Parallax: FC<ParallaxProps> = ({
                   placeSelf: "stretch",
                   position: "relative",
                 }}
+                className={styles.container}
                 data-scroll
                 data-scroll-speed={`${item.points[4]}`}
               >
@@ -50,8 +47,37 @@ const Parallax: FC<ParallaxProps> = ({
                   alt={item.content.title}
                   src={item.content.url}
                   className={styles.image}
-                  placeholder="blur"
-                  blurDataURL={blurDataURLs[idx]}
+                />
+              </div>
+            );
+          case "series":
+            return (
+              <div
+                key={item.content.id}
+                style={{
+                  gridColumn: isMobile
+                    ? `${item.points[2]} / span ${item.points[3]}`
+                    : `${item.points[0]} / span ${item.points[1]}`,
+                  gridRow: isMobile
+                    ? `${item.points[0]} / span ${item.points[1]}`
+                    : `${item.points[2]} / span ${item.points[3]}`,
+                  placeSelf: "stretch",
+                  position: "relative",
+                }}
+                className={styles.container}
+                data-scroll
+                data-scroll-speed={`${item.points[4]}`}
+              >
+                <Image
+                  onClick={() => {
+                    router.push(`art/${item.content.id}`);
+                  }}
+                  loading="eager"
+                  layout="fill"
+                  objectFit="contain"
+                  alt={item.content.title}
+                  src={item.content.pieces[0].url}
+                  className={styles.image}
                 />
               </div>
             );

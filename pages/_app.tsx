@@ -4,12 +4,26 @@ import Head from "next/head";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Navigation from "../components/Navigation";
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import ResetScroll from "../utils/ResetScroll";
+import NProgress from "nprogress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const containerRef = useRef(null);
-  const { pathname } = useRouter();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", NProgress.start);
+    router.events.on("routeChangeComplete", NProgress.done);
+    router.events.on("routeChangeError", NProgress.done);
+    router.prefetch("/art");
+
+    return () => {
+      router.events.off("routeChangeStart", NProgress.start);
+      router.events.off("routeChangeComplete", NProgress.done);
+      router.events.off("routeChangeError", NProgress.done);
+    };
+  });
 
   return (
     <LocomotiveScrollProvider
@@ -30,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         },
       }}
       containerRef={containerRef}
-      watch={[pathname]}
+      watch={[router.pathname]}
     >
       <Head>
         <title>Sage Fiorentino-Lange</title>

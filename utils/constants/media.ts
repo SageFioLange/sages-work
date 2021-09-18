@@ -211,7 +211,7 @@ export const pieces: Record<string | number, TPiece> = {
     id: "mythHistoryHonest_Mistake",
   },
   verificationPoster: {
-    title: "Nuclear Verification Poster",
+    title: "They Don't Want To Be Found",
     date: "Spring 2019",
     description:
       'A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties. This poster won for "Graphic Designer\'s Choice" as judged by Michael Beirut and Ellen Lupton.',
@@ -221,7 +221,7 @@ export const pieces: Record<string | number, TPiece> = {
     id: "verificationPoster",
   },
   verificationPoster1: {
-    title: "Nuclear Verification Poster",
+    title: "Seeing Is Believing",
     date: "Spring 2019",
     description:
       "A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties.",
@@ -233,6 +233,21 @@ export const pieces: Record<string | number, TPiece> = {
 };
 
 export const series: Record<string | number, TSeries> = {
+  cloudWatching: {
+    title: "Cloud Watching",
+    date: "February - March 2021",
+    description:
+      "A series of pieces that are generated algorithmically using a Machine Learning Language System and the religious texts of the Bible, the Torah, and the Quran. The System initially encodes each verse as a point in high-dimensional space (768 dimensions), then using complexity reduction techniques folds this space down into 3 dimensions. Next, the points are projected onto a 2D plane such that the resulting projection is a view of the continuum of two points (e.g. the point representing the word Love and the point representing the word Hate) from the position of a third point (e.g. Faith). The colors are determined by the initial positions in 3D space, and the sizes are determined by the distance from the plane. In order to make as many points visible as possible, the points are drawn biggest to smallest, which is not what a literal perspective of the 3D point cloud would look like. Instead, the resulting projection is a sort of inverted perspective, with the middle on top and the edges on the bottom, as if one was looking at something through both sides of the window at once.",
+    id: "cloudWatching",
+    pieces: [
+      pieces.eastWestSun,
+      pieces.godSatanMan,
+      pieces.heavenHellEarth,
+      pieces.loveHateFaith,
+      pieces.mythHistoryHonest_Mistake,
+    ],
+    type: "series",
+  },
   memePosters: {
     title: "Meme Posters",
     date: "Spring 2019",
@@ -251,21 +266,6 @@ export const series: Record<string | number, TSeries> = {
       pieces.nostalgia,
       pieces.politics,
       pieces.sexuality,
-    ],
-    type: "series",
-  },
-  cloudWatching: {
-    title: "Cloud Watching",
-    date: "February - March 2021",
-    description:
-      "A series of pieces that are generated algorithmically using a Machine Learning Language System and the religious texts of the Bible, the Torah, and the Quran. The System initially encodes each verse as a point in high-dimensional space (768 dimensions), then using complexity reduction techniques folds this space down into 3 dimensions. Next, the points are projected onto a 2D plane such that the resulting projection is a view of the continuum of two points (e.g. the point representing the word Love and the point representing the word Hate) from the position of a third point (e.g. Faith). The colors are determined by the initial positions in 3D space, and the sizes are determined by the distance from the plane. In order to make as many points visible as possible, the points are drawn biggest to smallest, which is not what a literal perspective of the 3D point cloud would look like. Instead, the resulting projection is a sort of inverted perspective, with the middle on top and the edges on the bottom, as if one was looking at something through both sides of the window at once.",
-    id: "cloudWatching",
-    pieces: [
-      pieces.eastWestSun,
-      pieces.godSatanMan,
-      pieces.heavenHellEarth,
-      pieces.loveHateFaith,
-      pieces.mythHistoryHonest_Mistake,
     ],
     type: "series",
   },
