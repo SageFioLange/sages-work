@@ -60,20 +60,19 @@ const Navigation: FC = () => {
         />
       </div>
       <div className={styles.container}>
-        {pages.map(({ path, name, color }, idx) => {
+        {pages.map(({ path, name }, idx) => {
           const active = pathname === path;
           return (
             <div style={{ position: "relative" }} key={idx}>
               {active ? (
                 <div
                   className={styles.dot}
-                  style={{ backgroundColor: color }}
+                  style={{ backgroundColor: "#9db895" }}
                 />
               ) : null}
               <Link href={path} passHref>
                 <a
                   style={{
-                    color: active ? color : "black",
                     fontWeight: active ? 600 : 400,
                     fontFamily: active ? "cursive" : "monospace",
                     display: "inline-block",
