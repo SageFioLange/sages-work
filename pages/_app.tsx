@@ -33,14 +33,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         direction: "horizontal",
         gestureDirection: "both",
         smartphone: {
-          smooth: true,
+          smooth: false,
           direction: "vertical",
-          gestureDirection: "both",
         },
         tablet: {
-          smooth: true,
+          smooth: false,
           direction: "vertical",
-          gestureDirection: "both",
         },
       }}
       containerRef={containerRef}

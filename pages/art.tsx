@@ -15,47 +15,28 @@ const Art: NextPage = () => {
 
   return (
     <div
-      data-scroll
-      style={
-        isMobile
-          ? {
-              height: `${items.length * 100}vh`,
-              width: "100vw",
-              gridTemplate: `repeat(2, 1fr) / repeat(${items.length}, fr)`,
-            }
-          : {
-              height: "100vh",
-              width: `${items.length * 100}vw`,
-              gridTemplate: `repeat(${items.length}, fr) / repeat(2, 1fr)`,
-            }
-      }
-      className={styles.container}
+      data-scroll-section
+      style={{ height: "100vh", width: "100vw", overflow: "auto" }}
     >
       {items.map((item, idx) => (
         <div
-          data-scroll
-          className={styles.imageContainer}
+          className={styles.sticky}
           style={{
-            gridColumn: isMobile ? "1 / 2" : `${idx + 1} / span 1`,
-            gridRow: isMobile ? `${idx + 1} / span 1` : "1 / 2",
+            zIndex: idx,
           }}
-          key={item.title}
+          key={item.id}
         >
-          <Image
-            src={item.url}
-            alt={item.title}
-            objectFit="scale-down"
-            layout="fill"
-            placeholder={item.id === "surgery" ? "blur" : "empty"}
-            blurDataURL={
-              item.id === "surgery" ? "/blur/surgery.jpg" : undefined
-            }
-            onClick={() =>
-              router.push(
-                `/art/${item.series ? media[item.series].id : item.id}`
-              )
-            }
-          />
+          <div className={styles.imageContainer}>
+            <Image
+              src={item.url}
+              alt={item.title}
+              objectFit="contain"
+              layout="fill"
+              onClick={() =>
+                router.push(`/art/${item.series ? item.series : item.id}`)
+              }
+            />
+          </div>
         </div>
       ))}
     </div>
