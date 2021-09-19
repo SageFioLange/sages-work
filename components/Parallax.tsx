@@ -17,7 +17,7 @@ const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
         width: isMobile ? "100vw" : "250vw",
       }}
     >
-      {homeContent.map((item, idx) => {
+      {homeContent.map((item) => {
         switch (item.content.type) {
           case "piece":
             return (

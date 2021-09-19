@@ -33,11 +33,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         direction: "horizontal",
         gestureDirection: "both",
         smartphone: {
-          smooth: false,
+          smooth: router.pathname === "/",
           direction: "vertical",
         },
         tablet: {
-          smooth: false,
+          smooth: router.pathname === "/",
           direction: "vertical",
         },
       }}
