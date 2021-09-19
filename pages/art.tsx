@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
-import media from "../utils/constants/media";
+import media from "../constants/media";
 import Image from "next/image";
 import styles from "../styles/Art.module.css";
 
@@ -46,6 +46,10 @@ const Art: NextPage = () => {
             alt={item.title}
             objectFit="scale-down"
             layout="fill"
+            placeholder={item.id === "surgery" ? "blur" : "empty"}
+            blurDataURL={
+              item.id === "surgery" ? "/blur/surgery.jpg" : undefined
+            }
             onClick={() =>
               router.push(
                 `/art/${item.series ? media[item.series].id : item.id}`

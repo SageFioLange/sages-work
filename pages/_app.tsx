@@ -9,7 +9,7 @@ import ResetScroll from "../utils/ResetScroll";
 import NProgress from "nprogress";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement>(null);
   const router = useRouter();
 
   useEffect(() => {

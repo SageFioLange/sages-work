@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
-import media from "../../utils/constants/media";
+import media from "../../constants/media";
 
 const ArtItem: NextPage = () => {
   const router = useRouter();

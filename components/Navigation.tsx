@@ -3,7 +3,7 @@ import router, { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Navigation.module.css";
-import { pages } from "../utils/constants/nav";
+import { pages } from "../constants/nav";
 import { useState, useEffect, useRef } from "react";
 
 const Navigation: FC = () => {

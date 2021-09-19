@@ -1,5 +1,5 @@
 import type { NextPage, InferGetStaticPropsType } from "next";
-import homeContent from "../utils/constants/home";
+import homeContent from "../constants/home";
 import dynamic from "next/dynamic";
 
 const Parallax = dynamic(() => import("../components/Parallax"), {
@@ -7,7 +7,20 @@ const Parallax = dynamic(() => import("../components/Parallax"), {
 });
 
 const Home: NextPage = ({}) => {
-  return <Parallax homeContent={homeContent} />;
+  return (
+    <>
+      <Parallax homeContent={homeContent} />
+      <p
+        style={{
+          position: "fixed",
+          top: "50vh",
+          right: "-150vw",
+        }}
+      >
+        If you&apos;re seeing this, please reload the site.
+      </p>
+    </>
+  );
 };
 
 export default Home;

@@ -4,6 +4,10 @@
   user-select: none;
 }
 
+html {
+  overscroll-behavior-x: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
