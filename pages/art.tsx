@@ -15,7 +15,7 @@ const Art: NextPage = () => {
 
   return (
     <div
-      data-scroll-section
+      data-scroll
       style={{ height: "100vh", width: "100vw", overflow: "auto" }}
     >
       {items.map((item, idx) => (
@@ -28,7 +28,11 @@ const Art: NextPage = () => {
         >
           <div className={styles.imageContainer}>
             <Image
-              src={item.url}
+              src={`https://storage.googleapis.com/sages_work_content/art/${
+                item.series ? item.series : ""
+              }/${item.id}.jpg`}
+              width={item.images[0].width}
+              height={item.images[0].height}
               alt={item.title}
               objectFit="contain"
               layout="fill"

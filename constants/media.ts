@@ -4,7 +4,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "absurdism",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/absurdism.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -13,7 +18,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "capitalism",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/capitalism.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -22,7 +32,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "celebrity",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/celebrity.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -31,7 +46,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "criticalMass",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/critical_mass.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -40,7 +60,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "depression",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/depression.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -49,7 +74,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "fame",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/fame.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -58,7 +88,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "groupMentality",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/group_mentality.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -67,7 +102,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "hate",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/hate.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -76,7 +116,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "nostalgia",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/nostalgia.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -85,7 +130,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "politics",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/politics.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -94,7 +144,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "positivity",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/positivity.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -103,7 +158,12 @@ export const pieces: Record<string, TPiece> = {
     date: "Spring 2019",
     description: "TODO",
     id: "sexuality",
-    url: "https://storage.googleapis.com/sages_work_content/art/meme_posters/sexuality.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     series: "memePosters",
     type: "piece",
   },
@@ -113,7 +173,12 @@ export const pieces: Record<string, TPiece> = {
     description:
       "Acrylics on Canvas Foundation Board. A visual examination of emotions surrounding stitching, patching, and reconstructing",
     id: "surgery",
-    url: "https://storage.googleapis.com/sages_work_content/art/surgery.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 804,
+      },
+    ],
     type: "piece",
   },
   bicep: {
@@ -122,7 +187,12 @@ export const pieces: Record<string, TPiece> = {
     description:
       "Inspired by the relationship of the part to the whole, this work draws comparison between plant and animal life.",
     id: "bicep",
-    url: "https://storage.googleapis.com/sages_work_content/art/Bicep.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1500,
+      },
+    ],
     type: "piece",
   },
   goldenLife: {
@@ -130,17 +200,40 @@ export const pieces: Record<string, TPiece> = {
     date: "Winter 2018",
     description: "Taken in the suburbs of Massachussets.",
     id: "goldenLife",
-    url: "https://storage.googleapis.com/sages_work_content/art/Golden_life.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 668,
+      },
+    ],
     type: "piece",
   },
-  zipperInTheSky: {
-    title: "Zipper In The Sky",
+  bigZipper: {
+    title: "The Big Zipper",
     date: "Fall 2018",
     description:
       "This work uses long exposure to render a bright night sky. The focal element, a structure used for shade, appears to unzip (or zip up) the sky above. The juxtaposition of the sky and the shade are signifiers of the dynamic between human structures and the natural world.",
-    id: "zipperInTheSky",
-    url: "https://storage.googleapis.com/sages_work_content/art/Zipper_In_The_Sky.jpg",
+    id: "bigZipper",
+    images: [
+      {
+        width: 1000,
+        height: 668,
+      },
+    ],
     type: "piece",
+  },
+  juggler: {
+    title: "Juggler",
+    date: "Fall 2018",
+    description: "A practice in abstract composition using shadow.",
+    images: [
+      {
+        width: 1000,
+        height: 668,
+      },
+    ],
+    type: "piece",
+    id: "juggler",
   },
   conversation: {
     title: "Conversation",
@@ -148,7 +241,12 @@ export const pieces: Record<string, TPiece> = {
     description:
       "Acrylics on Canvas Foundation Board. This work depicts two faces in conversation, represented as abstract paint spikes.",
     id: "conversation",
-    url: "https://storage.googleapis.com/sages_work_content/art/conversation.jpg",
+    images: [
+      {
+        width: 1153,
+        height: 860,
+      },
+    ],
     type: "piece",
   },
   forestFire: {
@@ -157,7 +255,12 @@ export const pieces: Record<string, TPiece> = {
     description:
       "Acrylics on Canvas Foundation Board. An abstract rendering of a forest fire.",
     id: "forestFire",
-    url: "https://storage.googleapis.com/sages_work_content/art/forest%20fire.jpg",
+    images: [
+      {
+        width: 663,
+        height: 888,
+      },
+    ],
     type: "piece",
   },
   eastWestSun: {
@@ -166,7 +269,12 @@ export const pieces: Record<string, TPiece> = {
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "East" to "West" from the perspective of "Sun"',
     id: "eastWestSun",
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/east-west-sun.png",
+    images: [
+      {
+        width: 1000,
+        height: 1016,
+      },
+    ],
     type: "piece",
     series: "cloudWatching",
   },
@@ -175,7 +283,12 @@ export const pieces: Record<string, TPiece> = {
     date: "March 2021",
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "East" to "West" from the perspective of "Sun"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/god-satan-man.png",
+    images: [
+      {
+        width: 1000,
+        height: 993,
+      },
+    ],
     type: "piece",
     series: "cloudWatching",
     id: "godSatanMan",
@@ -185,58 +298,115 @@ export const pieces: Record<string, TPiece> = {
     date: "March 2021",
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Heaven" to "Hell" from the perspective of "Earth"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/heaven-hell-earth.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 826,
+      },
+    ],
     type: "piece",
     series: "cloudWatching",
     id: "heavenHellEarth",
   },
   loveHateFaith: {
-    title: "God - Satan - Man",
+    title: "Love - Hate - Faith",
     date: "February 2021",
     description:
       'The incipient piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Love" to "Hate" from the perspective of "Faith"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/love-hate-faith.png",
+    images: [
+      {
+        width: 1000,
+        height: 881,
+      },
+    ],
     type: "piece",
     series: "cloudWatching",
     id: "loveHateFaith",
   },
-  mythHistoryHonest_Mistake: {
+  mythHistoryHonestMistake: {
     title: "Myth - History - Honest Mistake",
     date: "March 2021",
     description:
       'A piece in the Cloud Watching series. This work arranges spatial representations of religious verses such that the projection is of the continuum from "Myth" to "History" from the perspective of "Honest Mistake"',
-    url: "https://storage.googleapis.com/sages_work_content/art/cloudwatching/myth-history-honest_mistake.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 858,
+      },
+    ],
     type: "piece",
     series: "cloudWatching",
-    id: "mythHistoryHonest_Mistake",
+    id: "mythHistoryHonestMistake",
   },
-  verificationPoster: {
+  verificationPoster1: {
     title: "They Don't Want To Be Found",
     date: "Spring 2019",
     description:
       'A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties. This poster won for "Graphic Designer\'s Choice" as judged by Michael Beirut and Ellen Lupton.',
-    url: "https://storage.googleapis.com/sages_work_content/art/verification_posters/Verification_Poster.jpg",
+    images: [
+      {
+        width: 1000,
+        height: 1334,
+      },
+    ],
     type: "piece",
     series: "verificationPosters",
-    id: "verificationPoster",
+    id: "verificationPoster1",
   },
-  verificationPoster1: {
+  verificationPoster2: {
     title: "Seeing Is Believing",
     date: "Spring 2019",
     description:
       "A poster created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties.",
-    url: "https://storage.googleapis.com/sages_work_content/art/verification_posters/Verification_poster_1.jpg",
+    images: [
+      {
+        width: 661,
+        height: 879,
+      },
+    ],
     type: "piece",
     series: "verificationPosters",
-    id: "verificationPoster1",
+    id: "verificationPoster2",
   },
   torrent: {
     title: "Torrent",
     date: "September 18th 2021",
     description: "Acrylics on canvas.",
-    url: "https://storage.googleapis.com/sages_work_content/art/torrent.jpg",
+    images: [
+      {
+        width: 1216,
+        height: 604,
+      },
+    ],
     type: "piece",
     id: "torrent",
+  },
+  hkProtestPoster: {
+    title: "5 Demands",
+    date: "Winter 2019",
+    description: "A poster made in support of the Hong Kong protesters.",
+    images: [
+      {
+        width: 648,
+        height: 864,
+      },
+    ],
+    type: "piece",
+    id: "hkProtestPoster",
+  },
+  glasses: {
+    title: "Glasses",
+    date: "Spring 2020",
+    description:
+      "Illuminating the analogous differences across gender in glass.",
+    images: [
+      {
+        width: 1500,
+        height: 1500,
+      },
+    ],
+    type: "piece",
+    id: "glasses",
   },
 };
 
@@ -252,7 +422,7 @@ export const series: Record<string | number, TSeries> = {
       pieces.godSatanMan,
       pieces.heavenHellEarth,
       pieces.loveHateFaith,
-      pieces.mythHistoryHonest_Mistake,
+      pieces.mythHistoryHonestMistake,
     ],
     type: "series",
   },
@@ -283,7 +453,7 @@ export const series: Record<string | number, TSeries> = {
     description:
       "Posters created for the NSquare Nuclear Verification Poster Contest. The aim was to create a poster that would inform the general public on the process of nuclear verification, which are the rights and obligations of countries to verify that they and others are abiding by the stipulations of their nuclear weapons treaties.",
     id: "verificationPosters",
-    pieces: [pieces.verificationPoster, pieces.verificationPoster1],
+    pieces: [pieces.verificationPoster1, pieces.verificationPoster2],
     type: "series",
   },
 };

@@ -1,14 +1,36 @@
-import type { NextPage } from "next";
+import type {
+  NextPage,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from "next";
 import { useRouter } from "next/router";
 import styles from "../../styles/ArtItem.module.css";
-import Image from "next/image";
-import { isMobile } from "react-device-detect";
+import Image from "../../components/Image";
 import media from "../../constants/media";
 
-const ArtItem: NextPage = () => {
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  return {
+    props: {
+      item: params ? media[params.id as string] : undefined,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: Object.keys(media).map((key) => ({
+      params: {
+        id: key,
+      },
+    })),
+    fallback: false,
+  };
+}
+
+const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  item,
+}) => {
   const router = useRouter();
-  const { id } = router.query;
-  const item = typeof id === "string" ? media[id] : undefined;
 
   return item ? (
     item.type === "piece" ? (
@@ -16,16 +38,13 @@ const ArtItem: NextPage = () => {
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
       >
-        <div className={styles.sticky}>
-          <div className={styles.imageContainer}>
-            <Image
-              src={item.url}
-              alt={item.title}
-              objectFit="contain"
-              layout="fill"
-            />
+        {item.images.map((image, idx) => (
+          <div className={styles.sticky} key={idx}>
+            <div className={styles.imageContainer}>
+              <Image item={item} imgIdx={idx} />
+            </div>
           </div>
-        </div>
+        ))}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{item.title}</h1>
           {item.series && (
@@ -49,16 +68,10 @@ const ArtItem: NextPage = () => {
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
       >
-        {item.pieces.map((image, idx) => (
-          <div className={styles.sticky} key={image.id}>
+        {item.pieces.map((piece, idx) => (
+          <div className={styles.sticky} key={piece.id}>
             <div className={styles.imageContainer} style={{ zIndex: idx }}>
-              <Image
-                loading="eager"
-                src={image.url}
-                alt={image.title}
-                objectFit="contain"
-                layout="fill"
-              />
+              <Image item={piece} clickable />
             </div>
           </div>
         ))}

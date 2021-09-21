@@ -16,7 +16,7 @@ const homeContent = [
     points: [19, 12, 4, 45, 5],
   },
   {
-    content: media.verificationPoster,
+    content: media.verificationPoster1,
     points: [29, 12, 1, 50, 8],
   },
   {
@@ -32,7 +32,7 @@ const homeContent = [
     points: [21, 4, 8, 15, 19],
   },
   {
-    content: media.zipperInTheSky,
+    content: media.bigZipper,
     points: [25, 9, 8, 34, 12],
   },
   {
@@ -56,7 +56,7 @@ const homeContent = [
     points: [14, 2, 7, 18, 10],
   },
   {
-    content: media.verificationPoster1,
+    content: media.verificationPoster2,
     points: [14, 3, 29, 19, 15],
   },
   {

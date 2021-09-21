@@ -1,9 +1,14 @@
+declare type TImage = {
+  width: number;
+  height: number;
+};
+
 declare type TPiece = {
   title: string;
   date: string;
   description: string;
   id: string;
-  url: string;
+  images: TImage[];
   series?: string;
   type: "piece";
 };
@@ -14,7 +19,6 @@ declare type TSeries = {
   description: string;
   id: string;
   pieces: TPiece[];
-  series?: string;
   type: "series";
 };
 
@@ -22,8 +26,7 @@ declare type TWork = {
   title: string;
   date: string;
   id: string;
-  contentType: "image" | "text";
-  url: string;
+  content: string | TImage;
   type: "work";
 };
 
@@ -40,8 +43,7 @@ declare type TSong = {
   title: string;
   date: string;
   id: string;
-  url: string;
-  imageUrl: string;
+  image: TImage;
   type: "song";
 };
 
