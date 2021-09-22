@@ -2,16 +2,19 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import media from "../constants/media";
-import Image from "next/image";
+import Image from "../components/Image";
 import styles from "../styles/Art.module.css";
+import shuffle from "../utils/shuffle";
 
 const Art: NextPage = () => {
   const router = useRouter();
-  const items = Object.values(media)
-    .filter((item) => item.type === "series" || !item.series)
-    .map((item) => {
-      return item.type === "series" ? item.pieces[0] : item;
-    });
+  const items = shuffle(
+    Object.values(media)
+      .filter((item) => item.type === "series" || !item.series)
+      .map((item) => {
+        return item.type === "series" ? item.pieces[0] : item;
+      })
+  );
 
   return (
     <div
@@ -27,19 +30,7 @@ const Art: NextPage = () => {
           key={item.id}
         >
           <div className={styles.imageContainer}>
-            <Image
-              src={`https://storage.googleapis.com/sages_work_content/art/${
-                item.series ? item.series : ""
-              }/${item.id}.jpg`}
-              width={item.images[0].width}
-              height={item.images[0].height}
-              alt={item.title}
-              objectFit="contain"
-              layout="fill"
-              onClick={() =>
-                router.push(`/art/${item.series ? item.series : item.id}`)
-              }
-            />
+            <Image item={item} clickable />
           </div>
         </div>
       ))}

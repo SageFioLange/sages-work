@@ -7,20 +7,7 @@ const Parallax = dynamic(() => import("../components/Parallax"), {
 });
 
 const Home: NextPage = ({}) => {
-  return (
-    <>
-      <Parallax homeContent={homeContent} />
-      <p
-        style={{
-          position: "fixed",
-          top: "50vh",
-          right: "-150vw",
-        }}
-      >
-        If you&apos;re seeing this, please reload the site.
-      </p>
-    </>
-  );
+  return <Parallax homeContent={homeContent} />;
 };
 
 export default Home;
