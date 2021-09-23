@@ -9,7 +9,6 @@ type ParallaxProps = {
 };
 
 const Parallax: FC<ParallaxProps> = ({ homeContent }: ParallaxProps) => {
-  console.log(homeContent);
   return (
     <div
       className={styles.parallax}

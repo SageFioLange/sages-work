@@ -31,18 +31,18 @@
   margin-bottom: 12px;
 }
 
-.series {
+.parent {
   font: 600 1em Arial;
   margin-bottom: 12px;
 }
 
-.series:hover {
+.parent:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 .date {
-  font: 400 1em Arial;
+  font: 400 0.75em Arial;
   margin-bottom: 25px;
 }
 

@@ -1,15 +1,10 @@
-declare type TImage = {
-  width: number;
-  height: number;
-};
-
 declare type TPiece = {
   title: string;
   date: string;
   description: string;
   id: string;
-  images: TImage[];
-  series?: string;
+  multImgs?: number;
+  parent?: string;
   type: "piece";
 };
 
@@ -18,15 +13,17 @@ declare type TSeries = {
   date: string;
   description: string;
   id: string;
-  pieces: TPiece[];
+  children: TPiece[];
   type: "series";
 };
 
 declare type TWork = {
   title: string;
   date: string;
+  description: string;
   id: string;
-  content: string | TImage;
+  multImgs?: number;
+  parent?: string;
   type: "work";
 };
 
@@ -35,7 +32,7 @@ declare type TCollection = {
   date: string;
   description: string;
   id: string;
-  works: TWork[];
+  children: TWork[];
   type: "collection";
 };
 
@@ -43,7 +40,7 @@ declare type TSong = {
   title: string;
   date: string;
   id: string;
-  image: TImage;
+  parent?: string;
   type: "song";
 };
 
@@ -51,7 +48,7 @@ declare type TAlbum = {
   title: string;
   date: string;
   id: string;
-  songs: TSong[];
+  children: TSong[];
   type: "album";
 };
 

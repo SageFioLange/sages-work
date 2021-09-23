@@ -26,8 +26,6 @@ const Navigation: FC = () => {
       );
   }, [pathname, query]);
 
-  console.log(query);
-
   return (
     <>
       <div

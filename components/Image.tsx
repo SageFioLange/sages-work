@@ -12,39 +12,46 @@ const Image: FC<TImageProps> = ({ item, imgIdx = 0, clickable }) => {
   const router = useRouter();
   switch (item.type) {
     case "piece":
+    case "work":
+    case "song":
       return (
         <NextImage
-          src={`https://storage.googleapis.com/sages_work_content/art/${
-            item.series ? item.series + "/" : ""
+          src={`https://storage.googleapis.com/sages_work_content/${
+            item.parent ? item.parent + "/" : ""
           }${item.id}${imgIdx ? `_${imgIdx}` : ""}.jpg`}
           alt={item.title}
           layout="fill"
           objectFit="contain"
-          placeholder="blur"
-          blurDataURL={`/blurs/${item.series ? item.series + "/" : ""}${
-            item.id
-          }${imgIdx ? `_${imgIdx}` : ""}.jpg`}
-          objectPosition="center center"
           onDoubleClick={
             clickable
               ? () => {
-                  router.push(`art/${item.id}`);
+                  router.push(
+                    `/${item.type === "piece" ? "art" : ""}${
+                      item.type === "work" ? "design" : ""
+                    }${item.type === "song" ? "music" : ""}/${item.id}`
+                  );
                 }
               : undefined
           }
         />
       );
     case "series":
+    case "collection":
+    case "album":
       return (
         <NextImage
-          src={`https://storage.googleapis.com/sages_work_content/art/${item.id}/${item.pieces[0].id}.jpg`}
+          src={`https://storage.googleapis.com/sages_work_content/${item.id}/${item.children[0].id}.jpg`}
           alt={item.title}
-          layout="responsive"
+          layout="fill"
           objectFit="contain"
           onDoubleClick={
             clickable
               ? () => {
-                  router.push(`art/${item.id}`);
+                  router.push(
+                    `/${item.type === "series" ? "art" : ""}${
+                      item.type === "collection" ? "design" : ""
+                    }${item.type === "album" ? "music" : ""}/${item.id}`
+                  );
                 }
               : undefined
           }

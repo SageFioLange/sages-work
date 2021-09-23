@@ -12,7 +12,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   return {
     props: {
       item: params
-        ? (media[params.id as string] as TPiece | TSeries)
+        ? (media[params.id as string] as TWork | TCollection)
         : undefined,
     },
   };
@@ -29,13 +29,13 @@ export async function getStaticPaths() {
   };
 }
 
-const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const DesignItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   item,
 }) => {
   const router = useRouter();
 
   return item ? (
-    item.type === "piece" ? (
+    item.type === "work" ? (
       <div
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
@@ -87,10 +87,10 @@ const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       >
         {item.children
           .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
-          .map((piece, idx) => (
-            <div className={styles.sticky} key={piece.id}>
+          .map((work, idx) => (
+            <div className={styles.sticky} key={work.id}>
               <div className={styles.imageContainer} style={{ zIndex: idx }}>
-                <Image item={piece} clickable />
+                <Image item={work} clickable />
               </div>
             </div>
           ))}
@@ -115,4 +115,4 @@ const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 };
 
-export default ArtItem;
+export default DesignItem;
