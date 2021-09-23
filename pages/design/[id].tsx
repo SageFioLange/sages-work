@@ -85,15 +85,13 @@ const DesignItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
       >
-        {item.children
-          .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
-          .map((work, idx) => (
-            <div className={styles.sticky} key={work.id}>
-              <div className={styles.imageContainer} style={{ zIndex: idx }}>
-                <Image item={work} clickable />
-              </div>
+        {item.children.map((work, idx) => (
+          <div className={styles.sticky} key={work.id}>
+            <div className={styles.imageContainer} style={{ zIndex: idx }}>
+              <Image item={work} clickable />
             </div>
-          ))}
+          </div>
+        ))}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{item.title}</h1>
           <h3 className={styles.date}>

@@ -40,8 +40,8 @@ const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
       >
-        {item.multImgs ? (
-          Array(item.multImgs).map((_, idx) => (
+        {item.multImgs !== undefined ? (
+          new Array(item.multImgs).fill(1).map((_, idx) => (
             <div className={styles.sticky} key={idx}>
               <div className={styles.imageContainer}>
                 <Image item={item} imgIdx={idx} />
@@ -85,15 +85,13 @@ const ArtItem: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         data-scroll-section
         style={{ height: "100vh", width: "100vw", overflow: "auto" }}
       >
-        {item.children
-          .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
-          .map((piece, idx) => (
-            <div className={styles.sticky} key={piece.id}>
-              <div className={styles.imageContainer} style={{ zIndex: idx }}>
-                <Image item={piece} clickable />
-              </div>
+        {item.children.map((piece, idx) => (
+          <div className={styles.sticky} key={piece.id}>
+            <div className={styles.imageContainer} style={{ zIndex: idx }}>
+              <Image item={piece} clickable />
             </div>
-          ))}
+          </div>
+        ))}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{item.title}</h1>
           <h3 className={styles.date}>

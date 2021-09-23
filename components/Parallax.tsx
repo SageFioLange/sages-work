@@ -1,7 +1,6 @@
 import { FC } from "react";
 import styles from "../styles/Parallax.module.css";
 import { isMobile } from "react-device-detect";
-import router from "next/router";
 import Image from "./Image";
 
 type ParallaxProps = {

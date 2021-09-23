@@ -95,13 +95,6 @@ const singular: Record<string, TPiece | TWork | TSong> = {
     parent: "memePosters",
     type: "work",
   },
-  surgery: {
-    title: "Surgery",
-    date: new Date(2021, 9).toString(),
-    description: 'Acrylics on Canvas Foundation Board. 12"x16"',
-    id: "surgery",
-    type: "piece",
-  },
   bicep: {
     title: "Bicep",
     date: new Date(2018, 10).toString(),
@@ -132,6 +125,13 @@ const singular: Record<string, TPiece | TWork | TSong> = {
     type: "piece",
     id: "juggler",
   },
+  forestFire: {
+    title: "Forest Fire",
+    date: new Date(2021, 9).toString(),
+    description: 'Acrylics on Canvas Foundation Board. 12"x16"',
+    id: "forestFire",
+    type: "piece",
+  },
   conversation: {
     title: "Conversation",
     date: new Date(2021, 9).toString(),
@@ -139,11 +139,11 @@ const singular: Record<string, TPiece | TWork | TSong> = {
     id: "conversation",
     type: "piece",
   },
-  forestFire: {
-    title: "Forest Fire",
+  surgery: {
+    title: "Surgery",
     date: new Date(2021, 9).toString(),
     description: 'Acrylics on Canvas Foundation Board. 12"x16"',
-    id: "forestFire",
+    id: "surgery",
     type: "piece",
   },
   loveHateFaith: {
@@ -233,7 +233,7 @@ const singular: Record<string, TPiece | TWork | TSong> = {
   },
   midnightGrass: {
     title: "Grass at Midnight",
-    date: new Date(2021, 9, 21).toString(),
+    date: new Date(2021, 9, 18).toString(),
     description: 'Acrylics on canvas. 10"x10"',
     type: "piece",
     id: "midnightGrass",
@@ -265,6 +265,15 @@ const singular: Record<string, TPiece | TWork | TSong> = {
     description: 'Acrylics on Canvas. 18"x24"',
     type: "piece",
     id: "fracture",
+  },
+  growOfN: {
+    title: "Grow(N)",
+    date: new Date(2019, 4).toString(),
+    description:
+      "Grow of N, a self-designed collection of poems tackling the transition from adolescence into adulthood. Contains ~150 poems across 200 pages. Illustrated to depict the passage of time through the stages of tree growth in Fall, Winter, and Spring.",
+    type: "piece",
+    id: "growOfN",
+    multImgs: 11,
   },
 };
 

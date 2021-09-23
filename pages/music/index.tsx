@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Music: NextPage = () => {
   return (
     <div
       style={{
@@ -13,9 +13,11 @@ const Home: NextPage = () => {
         justifyContent: "center",
       }}
     >
-      <h1>This page is currently under construction.</h1>
+      <h1 style={{ fontFamily: "monospace" }}>
+        This page is currently under construction.
+      </h1>
     </div>
   );
 };
 
-export default Home;
+export default Music;

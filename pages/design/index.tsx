@@ -1,17 +1,15 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import media from "../../constants/media";
 import Image from "../../components/Image";
 import styles from "../../styles/Gallery.module.css";
 
 const Design: NextPage = () => {
-  const router = useRouter();
   const items = Object.values(media)
     .filter(
       (item) =>
         (item.type === "work" && !item.parent) || item.type === "collection"
     )
-    .sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 
   return (
     <div

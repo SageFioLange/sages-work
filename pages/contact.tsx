@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Contact: NextPage = () => {
   return (
     <div
       style={{
@@ -14,11 +12,23 @@ const Home: NextPage = () => {
         flexDirection: "column",
       }}
     >
-      <h1>This page is currently under construction.</h1>
-      <h2>Please direct emails to contact@sages.work</h2>
-      <h2>Please direct texts and calls to (505) - 738 - 4915</h2>
+      <h1
+        style={{
+          fontFamily: "monospace",
+          padding: 25,
+        }}
+      >
+        Please direct emails to contact@sages.work and texts and calls to (505)
+        - 738 - 4915
+      </h1>
+      <h1
+        style={{
+          fontFamily: "monospace",
+          padding: 25,
+        }}
+      ></h1>
     </div>
   );
 };
 
-export default Home;
+export default Contact;

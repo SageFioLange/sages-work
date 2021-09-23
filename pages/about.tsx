@@ -1,40 +1,19 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/About.module.css";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
-    <div
-      style={{
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <h1 style={{ padding: 25 }}>
-        This page is currently under construction.
-      </h1>
-      <h2 style={{ padding: 25, paddingBottom: 0 }}>Sage Fiorentino-Lange</h2>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Sage Fiorentino-Lange</h1>
       <textarea
-        style={{
-          margin: 25,
-          width: "80vw",
-          height: "50vh",
-          maxWidth: 500,
-          maxHeight: 500,
-          border: "none",
-        }}
-      >
-        is an artist and general creative based in Albuquerque, New Mexico. Her
+        className={styles.bio}
+        value="is an artist and general creative based in Albuquerque, New Mexico. Her
         work is centered on the relationship between data and the contemporary
         human experience and stretches across many mediums including painting,
-        sculpture, poetry, photography, music, and digital design.
-      </textarea>
+        poetry, photography, music, and digital design."
+      />
     </div>
   );
 };
 
-export default Home;
+export default About;

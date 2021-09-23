@@ -15,19 +15,40 @@ const Home: NextPage = () => {
         textAlign: "center",
       }}
     >
-      <div style={{ padding: "25px" }}>
-        <h1>This page is currently under construction.</h1>
-        <h2 style={{ marginTop: "25px" }}>
-          A short list of my skills and services
-        </h2>
-        <ul style={{ marginTop: "12px", textAlign: "left" }}>
-          <li>Web Development and Search Engine Optimization</li>
-          <li>Graphic Design and Branding</li>
-          <li>Music Production, Mixing, and Live Performances</li>
-          <li>Machine Learning Systems Development</li>
-          <li>Data Analysis and Visualization</li>
-          <li>Creative Direction and Project Management</li>
-        </ul>
+      <div
+        style={{
+          padding: "25px",
+          display: "grid",
+          gridTemplate: "repeat(7, 1fr) / 1fr 1fr",
+          fontFamily: "monospace",
+        }}
+      >
+        <h3 style={{ gridArea: "1 / 1 / 2 /2" }}>Service</h3>
+        <h3 style={{ gridArea: "1 / 2 / 2 / 3" }}>Rate</h3>
+        <p style={{ gridArea: "2 / 1 / 3 / 2" }}>
+          Web Development and Search Engine Optimization
+        </p>
+        <p style={{ gridArea: "3 / 1 / 4 / 2" }}>Graphic Design and Branding</p>
+        <p style={{ gridArea: "4 / 1 / 5 / 2" }}>
+          Music Production, Mixing, and Live Performances
+        </p>
+        <p style={{ gridArea: "5 / 1 / 6 / 2" }}>
+          Machine Learning Systems Development
+        </p>
+        <p style={{ gridArea: "6 / 1 / 7 / 2" }}>
+          Data Analysis and Visualization
+        </p>
+        <p style={{ gridArea: "7 / 1 / 8 / 2" }}>
+          Creative Direction and Project Management
+        </p>
+        <p style={{ gridArea: "2 / 2 / 3 / 2" }}>$45/hr | $25/hr</p>
+        <p style={{ gridArea: "3 / 2 / 4 / 2" }}>$25/hr | $35/hr</p>
+        <p style={{ gridArea: "4 / 2 / 5 / 2" }}>
+          $20/hr | $35/hr | Negotiable
+        </p>
+        <p style={{ gridArea: "5 / 2 / 6 / 2" }}>$90/hr</p>
+        <p style={{ gridArea: "6 / 2 / 7 / 2" }}>$50/hr | $30/hr</p>
+        <p style={{ gridArea: "7 / 2 / 8 / 3" }}>$55/hr</p>
       </div>
     </div>
   );
