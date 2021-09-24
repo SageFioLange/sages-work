@@ -20,11 +20,13 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 
 export async function getStaticPaths() {
   return {
-    paths: Object.keys(media).map((key) => ({
-      params: {
-        id: key,
-      },
-    })),
+    paths: Object.values(media)
+      .filter((item) => item.type === "piece" || item.type === "series")
+      .map(({ id }) => ({
+        params: {
+          id,
+        },
+      })),
     fallback: false,
   };
 }
