@@ -18,8 +18,17 @@ const Contact: NextPage = () => {
           padding: 25,
         }}
       >
-        Please direct emails to contact@sages.work and texts and calls to (505)
-        - 738 - 4915
+        Please direct emails to{" "}
+        <a
+          href="mailto:contact@sages.work"
+          style={{ textDecoration: "underline" }}
+        >
+          contact@sages.work
+        </a>{" "}
+        and texts and calls to{" "}
+        <a href="tel:5057384915" style={{ textDecoration: "underline" }}>
+          (505)-738-4915
+        </a>
       </h1>
       <h1
         style={{
