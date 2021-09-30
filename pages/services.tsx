@@ -19,6 +19,7 @@ const Home: NextPage = () => {
         style={{
           padding: "25px",
           display: "grid",
+          gap: "15px",
           gridTemplate: "repeat(7, 1fr) / 1fr 1fr",
           fontFamily: "monospace",
         }}
@@ -32,13 +33,13 @@ const Home: NextPage = () => {
         <p style={{ gridArea: "4 / 1 / 5 / 2" }}>
           Music Production, Mixing, and Live Performances
         </p>
-        <p style={{ gridArea: "5 / 1 / 6 / 2" }}>
+        {/* <p style={{ gridArea: "5 / 1 / 6 / 2" }}>
           Machine Learning Systems Development
         </p>
         <p style={{ gridArea: "6 / 1 / 7 / 2" }}>
           Data Analysis and Visualization
-        </p>
-        <p style={{ gridArea: "7 / 1 / 8 / 2" }}>
+        </p> */}
+        <p style={{ gridArea: "5 / 1 / 6 / 2" }}>
           Creative Direction and Project Management
         </p>
         <p style={{ gridArea: "2 / 2 / 3 / 2" }}>$45/hr | $25/hr</p>
@@ -46,9 +47,9 @@ const Home: NextPage = () => {
         <p style={{ gridArea: "4 / 2 / 5 / 2" }}>
           $20/hr | $35/hr | Negotiable
         </p>
-        <p style={{ gridArea: "5 / 2 / 6 / 2" }}>$90/hr</p>
-        <p style={{ gridArea: "6 / 2 / 7 / 2" }}>$50/hr | $30/hr</p>
-        <p style={{ gridArea: "7 / 2 / 8 / 3" }}>$55/hr</p>
+        {/* <p style={{ gridArea: "5 / 2 / 6 / 2" }}>$90/hr</p>
+        <p style={{ gridArea: "6 / 2 / 7 / 2" }}>$50/hr | $30/hr</p> */}
+        <p style={{ gridArea: "5 / 2 / 6 / 2" }}>$55/hr</p>
       </div>
     </div>
   );
