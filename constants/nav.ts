@@ -11,10 +11,10 @@ export const pages = [
     name: "Design",
     path: "/design",
   },
-  {
-    name: "Music",
-    path: "/music",
-  },
+  // {
+  //   name: "Music",
+  //   path: "/music",
+  // },
   {
     name: "Services",
     path: "/services",
