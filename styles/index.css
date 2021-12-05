@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  overscroll-behavior-x: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.full-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.centered-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: block;
+  width: 80vw;
+  max-width: 30rem;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-button {
+  width: 10rem;
+}

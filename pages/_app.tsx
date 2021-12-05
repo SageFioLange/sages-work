@@ -1,66 +1,21 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Head from "next/head";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import Navigation from "../components/Navigation";
-import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
-import ResetScroll from "../utils/ResetScroll";
-import NProgress from "nprogress";
+import "styles/index.css";
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBB87AlqcxS2KTwErAwRCN-nZolIlVU234",
+  authDomain: "sages-c585b.firebaseapp.com",
+  projectId: "sages-c585b",
+  storageBucket: "sages-c585b.appspot.com",
+  messagingSenderId: "715418059724",
+  appId: "1:715418059724:web:402ca1a9b00c2f75a39369",
+};
+
+initializeApp(firebaseConfig);
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const containerRef = useRef<HTMLElement>(null);
-  const router = useRouter();
-
-  useEffect(() => {
-    router.events.on("routeChangeStart", NProgress.start);
-    router.events.on("routeChangeComplete", NProgress.done);
-    router.events.on("routeChangeError", NProgress.done);
-
-    return () => {
-      router.events.off("routeChangeStart", NProgress.start);
-      router.events.off("routeChangeComplete", NProgress.done);
-      router.events.off("routeChangeError", NProgress.done);
-    };
-  });
-
-  return (
-    <LocomotiveScrollProvider
-      options={{
-        touchMultiplier: 2,
-        smooth: true,
-        direction: "horizontal",
-        gestureDirection: "both",
-        smartphone: {
-          smooth: true,
-          direction: "vertical",
-        },
-        tablet: {
-          smooth: true,
-          direction: "vertical",
-        },
-      }}
-      containerRef={containerRef}
-      watch={[router.pathname]}
-    >
-      <Head>
-        <title>Sage Fiorentino-Lange</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="google-site-verification"
-          content="l7AB1upu6rJ_wnCYeiKUk0zro8c_e9oMaHMERsGHEG8"
-        />
-      </Head>
-      <Navigation />
-      <ResetScroll>
-        <main data-scroll-container ref={containerRef}>
-          <div data-scroll-section>
-            <Component {...pageProps} />
-          </div>
-        </main>
-      </ResetScroll>
-    </LocomotiveScrollProvider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;

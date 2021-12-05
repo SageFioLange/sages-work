@@ -1,17 +1,42 @@
-import type { NextPage } from "next";
-import homeContent from "../constants/home";
-import dynamic from "next/dynamic";
-import { isMobile } from "react-device-detect";
-import Parallax from "../components/Parallax";
+import React from "react";
 
-const ParallaxDynamic = dynamic(() => import("../components/Parallax"));
+import Head from "next/head";
+import { InferGetStaticPropsType } from "next";
 
-const Home: NextPage = ({}) => {
-  return isMobile ? (
-    <ParallaxDynamic homeContent={homeContent} />
-  ) : (
-    <Parallax homeContent={homeContent} />
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
+const db = getFirestore();
+
+export default function Home({
+  items,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  return (
+    <>
+      <Head>
+        <title>Sage&apos;s Work</title>
+      </Head>
+    </>
   );
-};
+}
 
-export default Home;
+export async function getStaticProps() {
+  const items: Item[] = [];
+  const querySnapshot = await getDocs(collection(db, "items"));
+  querySnapshot.forEach((item) => {
+    const data = item.data();
+    if ("title" in data && "description" in data && "content" in data) {
+      items.push({
+        title: data.title,
+        description: data.description,
+        content: data.content,
+        id: item.id,
+      });
+    }
+  });
+
+  return {
+    props: {
+      items,
+    },
+  };
+}
